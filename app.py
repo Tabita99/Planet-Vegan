@@ -16,10 +16,15 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
 @app.route("/")
-def hello():
-    return "Hello World"
+@app.route("/base")
+def base():
+    return render_template("base.html")
+
+
+@app.route("/home")
+def home_page():
+    return render_template("home.html")
 
 
 if __name__ == "__main__":
