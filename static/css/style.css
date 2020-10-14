@@ -11,4 +11,19 @@ body {
  .background-image{
    width: 100%;  
  }
- 
+
+/*--media queries--*/
+
+@media only screen and (min-width: 992x) {
+    .background-image{
+        height: 80vh;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .background-image{
+        height: 80vh;
+    }
+}
+
+
