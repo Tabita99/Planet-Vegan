@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700|Lato:100,200,300,400,500,600,700');
+
 body {
     display: flex;
     min-height: 100vh;
@@ -8,9 +10,20 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+/*--fonts--*/
+.welcome-message{
+    font-family: 'Petit Formal Script', cursive, sans-serif; 
+}
+  
+/*--homepage--*/
  .background-image{
    width: 100%;  
  }
+
+ .welcome-message{
+    text-align:center;
+}
 
 /*--media queries--*/
 
