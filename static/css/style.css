@@ -15,6 +15,10 @@ body {
 .welcome-message{
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
+body{
+    font-family: Roboto, sans-serif;
+    font-size: large;
+}
   
 /*--homepage--*/
  .background-image{
@@ -24,6 +28,7 @@ body {
  .welcome-message{
     text-align:center;
 }
+
 
 /*--media queries--*/
 
