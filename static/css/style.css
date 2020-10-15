@@ -12,9 +12,25 @@ body {
   }
 
 /*--fonts--*/
-.welcome-message{
+.welcome-message {
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
+
+
+.breakfast, .lunch, .dinner, .desserts{
+    font-family: 'Petit Formal Script', cursive, sans-serif; 
+    font-weight:bold;
+    padding: 15px 15px;
+    text-decoration: underline;
+}
+
+.dinner {
+    font-family: 'Petit Formal Script', cursive, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
 body{
     font-family: Roboto, sans-serif;
     font-size: large;
@@ -29,9 +45,19 @@ body{
     text-align:center;
 }
 
-.cookie-pic .breakfast-pic .lunch-pic .dinner-pic{
+.cookie-pic, .breakfast-pic, .lunch-pic, .dinner-pic{
     width: 100%;
 }
+
+ .cookie-row{
+     position: relative;
+     text-align: center
+ }
+
+ .breakfast{
+    
+ }
+
 
 
 /*--media queries--*/
