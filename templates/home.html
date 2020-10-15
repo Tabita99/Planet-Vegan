@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-   <div class="parallax">
+    <div class="parallax">
 	    <img class="background-image" src="static/images/vegan-picture.jpg" alt="vegan lunch">
     </div>
 	<div>
@@ -37,22 +37,32 @@
 			</div>
 		</div>
         <div class="row cookie-row">
-            <div class="col s12 l6">
-               <img class= "breakfast-pic" src="static/images/breakfast.jpg" alt="cookies">
+            <div class="col s12 m6 l6 ">
+                <div class="breakfast">
+                   <a href="">Breakfast</a> 
+                </div>
+                <img class= "breakfast-pic" src="static/images/breakfast.jpg" alt="cookies">
             </div>
-            <div class="col s12 l6">
+            <div class="col s12 m6 l6">
+                <div class="lunch"> <a href=""> Lunch</a></div>
                <img class= "lunch-pic" src="static/images/vegan-lunch.jpg" alt="lunch"> 
             </div>
        </div>
        <div class="row cookie-row">
-            <div class="col s12 l6">
+            <div class="col s12 m6 l6">
+               <div class="dinner">
+                  <a href="">Dinner</a>
+               </div>
                <img class= "dinner-pic" src="static/images/vegan-greens.jpg" alt="dinner">
             </div>
-            <div class="col s12  l6">
+            <div class="col s12 m6 l6">
+               <div class="desserts">
+                 <a href=""> Desserts</a> 
+               </div>
               <img class= "cookie-pic" src="static/images/cookies.jpg" alt="cookies"> 
             </div>
        </div>
-   </div>
+    </div>
 
 
 {% endblock %}
