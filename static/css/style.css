@@ -30,6 +30,11 @@ body {
     text-decoration: underline;
     padding-bottom: 10px;
 }
+ 
+
+a{
+    color: black;
+}
 
 body{
     font-family: Roboto, sans-serif;
