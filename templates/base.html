@@ -25,7 +25,7 @@
 						data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 				<li><a href="{{ url_for('home_page') }}">Home</a></li>
 				<li><a href="#">Login</a></li>
-				<li><a href="#">Sign Up</a></li>
+				<li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
 			</ul>
 		</div>
 		<!-- mobile sidenav -->
@@ -34,7 +34,7 @@
 					data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 			<li><a href="{{ url_for('home_page') }}">Home</a></li>
 			<li><a href="#">Login</a></li>
-			<li><a href="#">Sign Up</a></li>
+			<li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
 		</ul>
 		<!-- Dropdown Structure Desktop-->
 		<ul id="dropdown1" class="dropdown-content">
