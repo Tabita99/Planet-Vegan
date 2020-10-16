@@ -17,15 +17,36 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 @app.route("/")
 @app.route("/home_page")
 def home_page():
     return render_template("home.html")
 
 
-@app.route("/sign_up", methods=["GET", "POST"])
-def sign_up():
-    return render_template("/signup.html")
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # check if username already exists
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+
+        signUp = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(signUp)
+
+        # check if username already exists
+        session["users"] = request.form.get("username").lower()
+        flash("Registration Successful!")
+
+    return render_template("signup.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
