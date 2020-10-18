@@ -5,12 +5,13 @@
 	<img class="background-image" src="static/images/vegan-picture.jpg" alt="vegan lunch">
 </div>
 	<div class="container">
-		<form class="col s12">
+		<form class="col s12" method="POST" action="{{ url_for('register') }}">
             <!--enter username-->
 			<div class="row">
 				<div class="input-field col s12">
 					<i class="material-icons prefix">account_circle</i>
-					<input id="username" name="username" type="text" class="validate">
+					<input id="username" name="username" type="text" minlength="5" 
+                       maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 					<label for="username">Username</label>
 				</div>
 			</div>
@@ -18,18 +19,19 @@
 			<div class="row">
 				<div class="input-field col s12">
                     <i class="material-icons prefix">vpn_key</i>
-					<input id="password" name="password" type="text" class="validate">
+					<input id="password" name="password" type="password" minlength="5" 
+                       maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 					<label for="password">Password</label>
 				</div>
 			</div>
-            <!--confirm password-->
+            <!--confirm password-
             <div class="row">
 				<div class="input-field col s12">
                      <i class="material-icons prefix">vpn_key</i>
 					<input id="confirm-password" name="password" type="text" class="validate">
 					<label for="confirm-password"> Confirm Password</label>
 				</div>
-			</div>
+			</div>-->
 			<div class="row">
 				<div class="col s12">
 				    <button type="submit" class="col s12 m5 offset-m4 btn-large green text-shadow">
