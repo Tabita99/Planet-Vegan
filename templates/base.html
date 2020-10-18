@@ -25,7 +25,7 @@
 						data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 				<li><a href="{{ url_for('home_page') }}">Home</a></li>
 				<li><a href="#">Login</a></li>
-				<li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+				<li><a href="{{ url_for('register') }}">Sign Up</a></li>
 			</ul>
 		</div>
 		<!-- mobile sidenav -->
@@ -34,7 +34,7 @@
 					data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 			<li><a href="{{ url_for('home_page') }}">Home</a></li>
 			<li><a href="#">Login</a></li>
-			<li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+			<li><a href="{{ url_for('register') }}">Sign Up</a></li>
 		</ul>
 		<!-- Dropdown Structure Desktop-->
 		<ul id="dropdown1" class="dropdown-content">
@@ -63,6 +63,20 @@
 
 
 {% endblock %}
+
+<section>
+    <!-- flash messages (copied from code on instituete task_manager project) -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="row flashes">
+	                <h4 class="light-green lighten-4 center-align">{{ message }}</h4>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+
 <footer>
 <div class="container">
             <div class="row">
