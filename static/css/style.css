@@ -12,7 +12,7 @@ body {
   }
 
 /*--fonts--*/
-.welcome-message {
+.welcome-message, .sign-up {
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
 
@@ -53,15 +53,14 @@ body{
 .cookie-pic, .breakfast-pic, .lunch-pic, .dinner-pic{
     width: 100%;
 }
-
+/*--change ths class later--*/
  .cookie-row{
      position: relative;
      text-align: center
  }
 
- .breakfast{
-    
- }
+/*--sign Up page--*/
+
 
 
 
