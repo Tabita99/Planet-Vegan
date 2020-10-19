@@ -62,6 +62,8 @@ def login():
                         session["user"] = request.form.get("username").lower()
                         flash("Welcome, {}".format(
                             request.form.get("username")))
+                        return redirect(url_for(
+                            "profile"))
 
             else:
                 # invalid password match
@@ -74,6 +76,12 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+@app.route("/profile")
+def profile():
+    # grab the session user's username from db
+    return render_template("profile.html")
 
 
 if __name__ == "__main__":
