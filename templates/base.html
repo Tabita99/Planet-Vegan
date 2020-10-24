@@ -24,8 +24,11 @@
 				<li><a class="dropdown-trigger2" href="#"
 						data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 				<li><a href="{{ url_for('home_page') }}">Home</a></li>
-				<li><a href="#">Login</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+				<li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
 				<li><a href="{{ url_for('register') }}">Sign Up</a></li>
+               
 			</ul>
 		</div>
 		<!-- mobile sidenav -->
@@ -33,7 +36,10 @@
 			<li><a class="dropdown-trigger2" href="#"
 					data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 			<li><a href="{{ url_for('home_page') }}">Home</a></li>
-			<li><a href="#">Login</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+			<li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <li><a href="">Logout</a></li>
 			<li><a href="{{ url_for('register') }}">Sign Up</a></li>
 		</ul>
 		<!-- Dropdown Structure Desktop-->
