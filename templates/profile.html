@@ -1,28 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="parallax">
-	<img class="background-image" src="static/images/vegan-picture.jpg" alt="vegan lunch">
-</div>
 	<div class="container">
 		<div class="col s12">
            <h3 class="center-align"> 
-                Hello!
+                 {{ session.users }}'s Profile
            </h3> 
-		</div>
-        <!--Search bar-->
-		<div class="row">
-			<form class="col s12">
-				<div class="row">
-					<div class="input-field col m8 offs s12 center search-bar">
-						<input id="query" name="query" type="text" class="validate">
-						<label for="query">Search Recipes </label>
-						<div class="col m8 s12">
-							<button class="btn-large waves-light green search"><i class="material-icons">search</i></button>
-						</div>
-					</div>
-				</div>
-			</form>
 		</div>
 	</div>
 
