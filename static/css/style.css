@@ -11,8 +11,16 @@ body {
     flex: 1 0 auto;
   }
 
+/*-- colour--*/
+.nav-colour {
+   background-color: #0a9c0a
+}
+a{
+    color: black;
+}
+
 /*--fonts--*/
-.welcome-message, .sign-up {
+.welcome-message, .sign-up, .login, .profile {
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
 
@@ -31,11 +39,7 @@ body {
     padding-bottom: 10px;
 }
  
-
-a{
-    color: black;
-}
-
+/*--homepage--*/
 body{
     font-family: Roboto, sans-serif;
     font-size: large;
