@@ -4,7 +4,6 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: gray;
   }
 
   main {
@@ -12,7 +11,7 @@ body {
   }
 
 /*-- colour--*/
-.nav-colour {
+.nav-colour, .footer {
    background-color: #0a9c0a
 }
 a{
