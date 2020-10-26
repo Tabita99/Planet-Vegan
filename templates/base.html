@@ -13,58 +13,60 @@
 </head>
 <body>
 
+	<!-- Dropdown Structure Desktop-->
+	<ul id="dropdown1" class="dropdown-content">
+		<li><a href="#!">Breakfast</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">Lunch</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">Dinner</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">Dessert</a></li>
+	</ul>
+
+	<!-- Mobile Dropdown Structure -->
+	<ul id="mobile-dropdown" class="dropdown-content">
+		<li><a href="#!">Breakfast</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">Lunch</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">Dinner</a></li>
+		<li class="divider"></li>
+		<li><a href="#!">Dessert</a></li>
+	</ul>
+
+
 	<!--Navbar-->
-<header>
-	<nav class="nav-colour">
-		<div class="nav-wrapper">
-			<a href="#!" class="brand-logo">Vegan Planet</a>
-			<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-			<ul class="right hide-on-med-and-down">
-				<!-- Dropdown Trigger -->
-				<li><a class="dropdown-trigger" href="#"
-						data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a href="{{ url_for('home_page') }}">Home</a></li>
-                <li><a href="{{ url_for('profile') }}">Profile</a></li>
-				<li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{ url_for('logout') }}">Logout</a></li>
-				<li><a href="{{ url_for('register') }}">Sign Up</a></li>
-               
-			</ul>
-		</div>
+	<header>
+		<nav class="nav-colour">
+			<div class="nav-wrapper">
+				<a href="#!" class="brand-logo">Vegan Planet</a>
+				<a href="#" data-target="mobile-demo"
+					class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<!-- Dropdown Trigger -->
+					<li><a class="dropdown-trigger" href="#"
+							data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li><a href="{{ url_for('home_page') }}">Home</a></li>
+					<li><a href="{{ url_for('profile') }}">Profile</a></li>
+					<li><a href="{{ url_for('login') }}">Login</a></li>
+					<li><a href="{{ url_for('logout') }}">Logout</a></li>
+					<li><a href="{{ url_for('register') }}">Sign Up</a></li>
+				</ul>
+			</div>
+		</nav>
 		<!-- mobile sidenav -->
 		<ul class="sidenav" id="mobile-demo">
 			<li><a class="dropdown-trigger" href="#"
-					data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
+					data-target="mobile-dropdown">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 			<li><a href="{{ url_for('home_page') }}">Home</a></li>
-            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+			<li><a href="{{ url_for('profile') }}">Profile</a></li>
 			<li><a href="{{ url_for('login') }}">Login</a></li>
-            <li><a href="{{ url_for('logout') }}">Logout</a></li>
-            <li><a href="">Logout</a></li>
+			<li><a href="{{ url_for('logout') }}">Logout</a></li>
+			<li><a href="">Logout</a></li>
 			<li><a href="{{ url_for('register') }}">Sign Up</a></li>
 		</ul>
-		<!-- Dropdown Structure Desktop-->
-		<ul id="dropdown1" class="dropdown-content">
-			<li><a href="#!">Breakfast</a></li>
-			<li class="divider"></li>
-			<li><a href="#!">Lunch</a></li>
-			<li class="divider"></li>
-			<li><a href="#!">Dinner</a></li>
-			<li class="divider"></li>
-			<li><a href="#!">Dessert</a></li>
-		</ul>
-
-		<!-- Mobile Dropdown Structure -->
-		<ul id="mobile-dropdown" class="dropdown-content">
-			<li><a href="#!">Breakfast</a></li>
-			<li class="divider"></li>
-			<li><a href="#!">Lunch</a></li>
-			<li class="divider"></li>
-			<li><a href="#!">Dinner</a></li>
-			<li class="divider"></li>
-			<li><a href="#!">Dessert</a></li>
-		</ul>
-	</nav>
-</header>
+	</header>
 {% block content %}
 
 
