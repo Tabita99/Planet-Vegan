@@ -6,7 +6,8 @@ body {
     min-height: 100vh;
     flex-direction: column;
   }
- 
+
+
  /*-- code copied from stackoverflow to make footer stay the bottom of the page---*/
  body {
   position: relative;
@@ -35,7 +36,7 @@ a{
 }
 
 /*--fonts--*/
-.welcome-message, .sign-up, .login, .profile {
+.welcome-message, .sign-up, .login, .profile-name {
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
 
@@ -96,5 +97,4 @@ body{
         height: 80vh;
     }
 }
-
 
