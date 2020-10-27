@@ -48,10 +48,13 @@
 					<li><a class="dropdown-trigger" href="#"
 							data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 					<li><a href="{{ url_for('home_page') }}">Home</a></li>
+                {% if session.user %}
 					<li><a href="{{ url_for('profile') }}">Profile</a></li>
-					<li><a href="{{ url_for('login') }}">Login</a></li>
-					<li><a href="{{ url_for('logout') }}">Logout</a></li>
+					<li><a href="{{ url_for('login') }}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
 					<li><a href="{{ url_for('register') }}">Sign Up</a></li>
+                {% endif %}
 				</ul>
 			</div>
 		</nav>
