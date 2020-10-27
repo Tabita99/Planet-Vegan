@@ -36,10 +36,15 @@ a{
 }
 
 /*--fonts--*/
-.welcome-message, .sign-up, .login, .profile-name {
+.welcome-message, .sign-up, .login, .profile-name{
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
 
+.breakfast-catergory {
+    font-family: 'Petit Formal Script', cursive, sans-serif; 
+    font-weight: normal;
+    font-size: xxx-large;
+}
 
 .breakfast, .lunch, .dinner, .desserts{
     font-family: 'Petit Formal Script', cursive, sans-serif; 
