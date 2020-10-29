@@ -94,7 +94,10 @@ def logout():
 
 @app.route("/breakfast")
 def breakfast():
-    return render_template("breakfast.html")
+    return render_template("breakfast.html", recipes=mongo.db.recipes.find(
+         {"category_name": "Breakfast"}
+    ))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
