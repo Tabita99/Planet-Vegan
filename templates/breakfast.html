@@ -2,45 +2,49 @@
 {% block content %}
 
 <h1 class=" breakfast-catergory center-align"> Breakfast </h1>
-<div class="container">
+<div class="container ">
 	<div class="row">
     {% for recipe in recipes %}
-        <!-- front of the card -->
-		<div class="card col s12 m4 ">
+		<!-- front of the card -->
+		<div class="card col m6 s12">
 			<div class="card-image waves-effect waves-block waves-light">
-			    <img class="activator" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
+				<img class="responsive-img activator" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
             </div>
-			<div class="card-content">
-				<span class="card-title activator grey-text text-darken-4">{{recipe.recipe_name}}<i class="material-icons right">more_vert</i></span>
-			</div>
-                <!-- back of the card  (layout copied from cecilia binck -->
+    
+				<div class="card-content">
+					<h5 class="card-title activator grey-text text-darken-4 recipe-name">
+						{{recipe.recipe_name}}<i class="material-icons right">more_vert</i></h5>
+				</div>
+				<!-- back of the card  (layout copied from cecilia binck -->
 				<div class="card-reveal">
-            <div class="row col s12"><h5 class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></h5>
-            </div>
-				<div class="row col s12 card-middle">
-					<div class="col s4"> <i class="material-icons prefix light-green">query_builder</i>
-						<p></p>
-						<p>Prep</p>
+					<div class="row col s12 ">
+						<h5 class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></h5>
 					</div>
-					<div class="col s4"> <i class="material-icons prefix light-green">hourglass_empty</i>
-						<p></p>
-						<p>Cook</p>
+					<div class="row col s12 card-middle">
+						<div class="col s4"> <i class="material-icons prefix light-green">query_builder</i>
+							<p></p>
+							<p>Prep</p>
+						</div>
+						<div class="col s4"> <i class="material-icons prefix light-green">hourglass_empty</i>
+							<p></p>
+							<p>Cook</p>
+						</div>
+						<div class="col s4"> <i class="material-icons prefix light-green">restaurant</i>
+							<p></p>
+							<p>Serves</p>
+						</div>
 					</div>
-					<div class="col s4"> <i class="material-icons prefix light-green">restaurant</i>
+					<div class="card-end col s12">
 						<p></p>
-						<p>Serves</p>
+					</div>
+					<div class="button col s12 center-align">
+						<a href="#" class="waves-effect waves-light open btn btn_small light-green">Open Recipe</a>
 					</div>
 				</div>
-                <div class="card-end col s12">
-                    <p></p> 
-                </div>
-                <div class="button col s12 center-align">
-                    <a href="#" class="waves-effect waves-light open btn btn_small light-green">Open Recipe</a> 
-                </div>
 			</div>
-			</div>
+            {% endfor %}
 		</div>
-	</div>{% endfor %}
+	</div>
 
 
 
