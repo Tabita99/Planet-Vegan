@@ -106,6 +106,13 @@ def lunch():
     ))
 
 
+@app.route("/dinner")
+def dinner():
+    return render_template("dinner.html", recipes=mongo.db.recipes.find(
+         {"category_name": "Dinner"}
+    ))
+
+
 @app.route("/open_recipe /<recipe_id>")
 def open_recipe(recipe_id):
     get_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
