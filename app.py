@@ -99,6 +99,12 @@ def breakfast():
     ))
 
 
+@app.route("/open_recipe /<recipe_id>")
+def open_recipe(recipe_id):
+    get_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("recipe.html", recipe=get_recipe)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
