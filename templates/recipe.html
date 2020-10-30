@@ -2,35 +2,40 @@
 <h1 class="center-align">Recipe</h1>
 
 <div class="card">
-<!-- Reciped page -->
-        <div class="col s12 m6">
-	        <img class="card-img" src="{{recipe.image}}" alt="{{recipe.recipe_name}}"> 
-        </div>
+<!--layout inspired by cecilia binck-->
+       <div>
+          <h2 class= "center-align recipe-name"> </h2>
+       </div>
+       <!--row for recipe image cooking time -->
+		<div class="row reciped">
+			<div class="col s12 m4 offset-m2">
+				<img class="card-img card-panel" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
+				        </div>
+				<div class="col s12 m4 ">
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class=" card-panel  col s12 m4 offset ">
+					<p><i class="material-icons prefix">query_builder</i>Prep Time: </p>
+					<p><i class="material-icons prefix">hourglass_empty</i>Cook Time: </p>
+					<p><i class="material-icons prefix">hourglass_full</i>Total Time: </p>
+					<p><i class="material-icons prefix">restaurant</i>Serves: </p>
+				</div>
+			</div>
         <div class="row ">
-        <div class="col  top-left">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </div>
-        <div class="col s12 m4 top-right">
-            <p><i class="material-icons prefix">query_builder</i>Prep Time: </p>
-            <p><i class="material-icons prefix">hourglass_empty</i>Cook Time: </p>
-            <p><i class="material-icons prefix">hourglass_full</i>Total Time: </p>
-            <p><i class="material-icons prefix">restaurant</i>Serves: </p>
-        </div>
-    </div>
-    <div class="row">
-    <!-- white middle rows -->
-        <div class="col middle-left s12 m6">
-        <h4 class="center-align">Ingredients</h4>
-        <ul id="ingredient"></ul>
-        </div>
-        <div class="col middle-right s12 m6">
-        <h4 class="center-align">Method</h4>
-        <ul id="methods"></ul>
-        </div>
-    </div>
+		<div class="row">
+			<!-- white middle rows -->
+			<div class="col middle-left s12 m6">
+				<h4 class="center-align">Ingredients</h4>
+				<ul id="ingredient"></ul>
+			</div>
+			<div class="col middle-right s12 m6">
+				<h4 class="center-align">Method</h4>
+				<ul id="methods"></ul>
+			</div>
+		</div>
     <div class="row ">
     <!--  -->
         <div class="bottom col s12">
