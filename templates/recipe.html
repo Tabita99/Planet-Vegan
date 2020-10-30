@@ -30,10 +30,20 @@
 			</div>
 		</div>
     <div class="row ">
-    <!--  -->
-        <div class="bottom col s12">
-        <a href="{{ url_for('breakfast') }}" class="go_back black-text">Go Back</a>
-        </div>
+    <!--if statment to return back to each catefgory page  -->
+        <div class="bottom col s12">  
+        {% if recipe.categor_name == 'Dinner' %}
+          <a href="{{ url_for('breakfast') }}" class="go_back black-text">Go Back</a>
+        {% elif recipe.category_name == 'Breakfast' %}
+          <a href="{{ url_for('breakfast') }}" class="go_back black-text">Go Back</a>
+        {% elif recipe.category_name == 'Lunch' %}
+          <a href="{{ url_for('lunch') }}" class="go_back black-text">Go Back</a>
+        {% elif recipe.category_name == 'Dinner' %}
+          <a href="{{ url_for('dinner') }}" class="go_back black-text">Go Back</a>
+        {% elif recipe.category_name == 'Dessert' %}
+          <a href="{{ url_for('dessert') }}" class="go_back black-text">Go Back</a>
+        {%  endif %}
+        </div> 
     </div>
 </div>
 
