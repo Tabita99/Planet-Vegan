@@ -15,7 +15,7 @@
 					<h5 class="card-title activator grey-text text-darken-4 recipe-name">
 						{{recipe.recipe_name}}<i class="material-icons right">more_vert</i></h5>
 				</div>
-				<!-- back of the card  (layout copied from cecilia binck -->
+				<!-- back of the card (layout copied from cecilia binck) -->
 				<div class="card-reveal">
 					<div class="row col s12 ">
 						<h5 class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></h5>
@@ -36,6 +36,7 @@
 					</div>
 					<div class="card-end col s12">
 						<p>{{recipe.recipe_description}}</p>
+                        <p> credit: {{recipe.credit}}</p>
 					</div>
 					<div class="button col s12 center-align">
 						<a href="{{ url_for('open_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light open btn btn_small light-green">Open Recipe</a>

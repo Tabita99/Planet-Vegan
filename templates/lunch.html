@@ -36,6 +36,7 @@
 					</div>
 					<div class="card-end col s12">
 						<p>{{recipe.recipe_description}}</p>
+                        <p> credit: {{recipe.credit}}</p>
 					</div>
 					<div class="button col s12 center-align">
 						<a href="{{ url_for('open_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light open btn btn_small light-green">Open Recipe</a>
