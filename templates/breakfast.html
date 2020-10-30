@@ -38,7 +38,7 @@
 						<p>{{recipe.recipe_description}}</p>
 					</div>
 					<div class="button col s12 center-align">
-						<a href="#" class="waves-effect waves-light open btn btn_small light-green">Open Recipe</a>
+						<a href="{{ url_for('open_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light open btn btn_small light-green">Open Recipe</a>
 					</div>
 				</div>
 			</div>
