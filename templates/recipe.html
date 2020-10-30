@@ -10,18 +10,14 @@
 		<div class="row reciped">
 			<div class="col s12 m4 ">
 				<img class="card-img card-panel" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
-				        </div>
-				<div class="col s12 m4  ">
-					<p></p>
-					<p></p>
-				</div>
-				<div class=" card-panel  col s12 m4 ">
-					<p><i class="material-icons prefix">query_builder</i>Prep Time:{{recipe.prep_time}} </p>
-					<p><i class="material-icons prefix">hourglass_empty</i>Cook Time:{{recipe.time_to_cook}} </p>
-					<p><i class="material-icons prefix">restaurant</i>Serves:{{recipe.serves}} </p>
-				</div>
+		    </div>
+			<div class=" card-panel  col s12 m4 ">
+				<p class="prep-time"><i class="material-icons prefix">query_builder</i>Prep Time:{{recipe.prep_time}} </p>
+				<p class="cook-time"><i class="material-icons prefix">hourglass_empty</i>Cook Time:{{recipe.time_to_cook}} </p>
+				<p class="serve"><i class="material-icons prefix">restaurant</i>Serves:{{recipe.serves}} </p>
+                <p class="card-panel">{{recipe.recipe_description}}</p>
 			</div>
-        <div class="row ">
+		</div>
 		<div class="row">
 			<!-- white middle rows -->
 			<div class="col middle-left s12 m6">
