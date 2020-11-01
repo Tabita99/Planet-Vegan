@@ -7,7 +7,7 @@
 			<h1 class="add-recipe col s12 center align">Add Your Recipe Here!</h1>
 		</div>
 	</div>
-	<form class="col s12">
+	<form class="col s12"  method="POST" action="{{ url_for('submit_recipes') }}">
         <div class="row">
 			<div class="input-field col s6">
 				<i class="material-icons prefix">assignment</i>
@@ -16,7 +16,7 @@
 			</div>
 			<div class="input-field col s6">
 				<i class="material-icons prefix ">hourglass_empty</i>
-				<input id="cooking_time" name="cooking_time" type="text" class="validate">
+				<input id="time_to_cook" name="time_to_cook" type="text" class="validate">
 				<label for="icon_prefix " class="black-text">Cooking Time</label>
 			</div>
 			<div class="input-field col s6">
@@ -30,6 +30,17 @@
 				<label for="icon_prefix " class="black-text">Serves</label>
 			</div>
 		</div>
+        <div class="row">
+			<div class="input-field col s12">
+				<select  name="category_name" id="category_name" class="black-text">
+			               <option value="" disabled selected>Choose your category</option>
+			               <option value="Breakfast">Breakfast</option>
+			               <option value="Lunch">Lunch</option>
+			               <option value="Dinner">Dinner</option>
+			               <option value="Dessert">Dessert</option>
+			            </select>
+			</div>
+        </div>
         <!--Image URL form copied ajgoward-->
         <div class="row">
 			<div class="input-field col s12">
