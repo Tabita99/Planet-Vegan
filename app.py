@@ -59,10 +59,10 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
+                session["users"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
                             request.form.get("username")))
-                        return redirect(url_for(
+                return redirect(url_for(
                             "profile"))
 
             else:
@@ -134,6 +134,27 @@ def open_recipe(recipe_id):
 def add_recipes():
     return render_template("addrecipes.html")
 
+
+@app.route('/submit_recipes', methods=["POST"])
+def submit_recipes():
+    # Allows you to submit recipes on  website
+    if request.method == "POST":
+        recipe = {
+          "category_name": request.form.get("category_name"),
+          "image": request.form.get("image"),
+          "recipe_name": request.form.get("recipe_name"),
+          "recipe_description": request.form.get("recipe_description"),
+          "time_to_cook": request.form.get("time_to_cook"),
+          "prep_time": request.form.get("prep_time"),
+          "serves": request.form.get("serves"),
+          "ingredients": request.form.get("ingredients"),
+          "method": request.form.get("method"),
+          "user": session["users"],
+          "credit": request.form.get("credit")
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Added , Thank you!")
+        return redirect(url_for('profile'))
 
 
 if __name__ == "__main__":
