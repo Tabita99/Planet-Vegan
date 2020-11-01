@@ -2,52 +2,76 @@
 {% block content %}
 <div class="container">
 	<div class="row">
-        <div class="">
-            <h1 class="add-recipe col s12 center align">Add Your Recipe Here!</h1>
-        </div>
+		<div class="">
+			<h1 class="add-recipe col s12 center align">Add Your Recipe Here!</h1>
+		</div>
 	</div>
-	<div class="">
-		<form class="col s12">
-			<div class="row">
-				<div class="input-field col s6">
-					<input placeholder="Placeholder" id="first_name" type="text" class="validate">
-					<label for="first_name">First Name</label>
-				</div>
-				<div class="input-field col s6">
-					<input id="last_name" type="text" class="validate">
-					<label for="last_name">Last Name</label>
-				</div>
+	<form class="col s12">
+    <!--Image URL form copied ajgoward-->
+        <div class="row">
+			<div class="input-field col s8">
+				<i class="material-icons prefix">http</i>
+				<textarea name="image" id="image" class="materialize-textarea"></textarea>
+				<label for="icon_telephone" class="black-text">Image URL</label>
 			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<input disabled value="I am not editable" id="disabled" type="text" class="validate">
-					<label for="disabled">Disabled</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="password" type="password" class="validate">
-					<label for="password">Password</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="email" type="email" class="validate">
-					<label for="email">Email</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12">
-					This is an inline input field:
-					<div class="input-field inline">
-						<input id="email_inline" type="email" class="validate">
-						<label for="email_inline">Email</label>
-						<span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+			<div class="col s4">
+				<a class="waves-effect waves-light btn modal-trigger green"
+					href="#modal1"><i class="material-icons green">lightbulb_outline</i></a>
+				<div id="modal1" class="modal">
+					<div class="modal-content">
+						<h4 class="headers">Help</h4>
+						<ol class="black-text">
+							<li> Search For images of Your dish</li>
+							<li> Right click the image </li>
+							<li> Click copy image address </li>
+							<li> Paste into the form </li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="btn-floating btn-medium modal-close waves-effect waves-light green">Great!</a>
 					</div>
 				</div>
 			</div>
-		</form>
-	</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+				<label for="first_name">First Name</label>
+			</div>
+			<div class="input-field col s6">
+				<input id="last_name" type="text" class="validate">
+				<label for="last_name">Last Name</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input disabled value="I am not editable" id="disabled" type="text" class="validate">
+				<label for="disabled">Disabled</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="password" type="password" class="validate">
+				<label for="password">Password</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="email" type="email" class="validate">
+				<label for="email">Email</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				This is an inline input field:
+				<div class="input-field inline">
+					<input id="email_inline" type="email" class="validate">
+					<label for="email_inline">Email</label>
+					<span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+				</div>
+			</div>
+		</div>
+	</form>
 </div>
 
 {% endblock %}
