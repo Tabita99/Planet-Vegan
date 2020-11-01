@@ -126,6 +126,16 @@ def open_recipe(recipe_id):
     return render_template("recipe.html", recipe=get_recipe)
 
 
+# CRUD functionality for the recipe collection ]
+
+
+@app.route("/add_recipes")
+# render add recipes page
+def add_recipes():
+    return render_template("addrecipes.html")
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
