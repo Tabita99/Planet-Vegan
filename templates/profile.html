@@ -11,6 +11,7 @@
 		</div>
         <div class="row">
     {% for recipe in recipes %}
+    {% if session.users|lower == recipe.user|lower %}
 		<!-- front of the card -->
 		<div class="card col m6 s12">
 			<div class="card-image waves-effect waves-block waves-light">
@@ -49,6 +50,7 @@
 					</div>
 				</div>
 			</div>
+            {% endif %}
             {% endfor %}
     
 		</div>
