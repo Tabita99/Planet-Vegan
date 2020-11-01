@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
+<!-- layout inspired by  ajgoward-->
 	<div class="row">
 		<div class="">
 			<h1 class="add-recipe col s12 center align">Add Your Recipe Here!</h1>
@@ -31,12 +32,25 @@
 		</div>
         <!--Image URL form copied ajgoward-->
         <div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">subject</i>
+				<textarea name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
+				<label for="icon_telephone" class="black-text">Ingredients</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">menu</i>
+				<textarea name="method" id="method" class="materialize-textarea"></textarea>
+				<label for="icon_telephone" class="black-text">Method</label>
+			</div>
+		</div>
+        <div class="row center m9 align ">
 			<div class="input-field col s8">
-				<i class="material-icons prefix">http</i>
 				<textarea name="image" id="image" class="materialize-textarea"></textarea>
 				<label for="icon_telephone" class="black-text">Image URL</label>
 			</div>
-			<div class="col s4">
+			<div class="col  s4">
 				<a class="waves-effect waves-light btn modal-trigger green"
 					href="#modal1"><i class="material-icons green">lightbulb_outline</i></a>
 				<div id="modal1" class="modal">
@@ -57,16 +71,9 @@
 		</div>
         <div class="row">
 			<div class="input-field col s12">
-				<i class="material-icons prefix">subject</i>
-				<textarea name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
-				<label for="icon_telephone" class="black-text">Ingredients</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="material-icons prefix">menu</i>
-				<textarea name="method" id="method" class="materialize-textarea"></textarea>
-				<label for="icon_telephone" class="black-text">Method</label>
+				<i class="material-icons prefix">http</i>
+				<textarea name="credit" id="credit" class="materialize-textarea"></textarea>
+				<label for="icon_telephone" class="black-text">Credit</label>
 			</div>
 		</div>
 	</form>
