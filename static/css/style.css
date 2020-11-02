@@ -84,11 +84,18 @@ body{
      text-align: center
  }
 
-/*--sign Up page--*/
+/*--Category pages--*/
+ .card-image img {
+     width: 0;
+     height: 60%;
+    
+    
+}
 
-
-
-
+.card .card-title {
+    font-size: 15px;
+ 
+}
 /*--media queries--*/
 
 @media only screen and (min-width: 992x) {
