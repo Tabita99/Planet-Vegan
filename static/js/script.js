@@ -3,5 +3,6 @@ $( document ).ready(function(){
     $('.sidenav').sidenav();
     $(".dropdown2").dropdown();
     $('select').formSelect();
+    $('.modal').modal();
     
 });
