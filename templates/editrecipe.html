@@ -5,36 +5,36 @@ div class="container">
 <div class="container">
 	<div class="row">
 		<div class="">
-			<h1 class="add-recipe col s12 center align">Add Your Recipe Here!</h1>
+			<h1 class="add-recipe col s12 center align">Edit Recipe</h1>
 		</div>
 	</div>
-	<form class="col s12"  method="POST" action="#">
+	<form class="col s12"  method="POST" action="{{ url_for('edit_recipes', recipe_id=recipe._id) }}">
         <div class="row">
 			<div class="input-field col s6">
 				<i class="material-icons prefix">assignment</i>
-				<input id="recipe_name" name="recipe_name" type="text" class="validate">
+				<input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}">
 				<label for="icon_prefix" class="black-text">Recipe Name</label>
 			</div>
 			<div class="input-field col s6">
 				<i class="material-icons prefix ">hourglass_empty</i>
-				<input id="time_to_cook" name="time_to_cook" type="text" class="validate">
+				<input id="time_to_cook" name="time_to_cook" type="text" class="validate" value="{{recipe.time_to_cook}}">
 				<label for="icon_prefix " class="black-text">Cooking Time</label>
 			</div>
 			<div class="input-field col s6">
 				<i class="material-icons prefix">query_builder</i>
-				<input id="prep_time" name="prep_time" type="text" class="validate">
+				<input id="prep_time" name="prep_time" type="text" class="validate" value="{{recipe.prep_time}}">
 				<label for="icon_prefix" class="black-text">Prep Time</label>
 			</div>
 			<div class="input-field col s6">
 				<i class="material-icons prefix">restaurant</i>
-				<input id="serves" name="serves" type="text" class="validate">
+				<input id="serves" name="serves" type="text" class="validate" value="{{recipe.serves}}">
 				<label for="icon_prefix " class="black-text">Serves</label>
 			</div>
 		</div>
         <div class="row">
 			<div class="input-field col s12">
 				<select  name="category_name" id="category_name" class="black-text">
-			               <option value="" disabled selected>Choose your category</option>
+			               <option value="{{recipe.category_name}}">Choose your category</option>
 			               <option value="Breakfast">Breakfast</option>
 			               <option value="Lunch">Lunch</option>
 			               <option value="Dinner">Dinner</option>
@@ -46,20 +46,20 @@ div class="container">
         <div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">subject</i>
-				<textarea name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
+				<textarea name="ingredients" id="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
 				<label for="icon_telephone" class="black-text">Ingredients</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">menu</i>
-				<textarea name="method" id="method" class="materialize-textarea"></textarea>
+				<textarea name="method" id="method" class="materialize-textarea">{{recipe.method}}</textarea>
 				<label for="icon_telephone" class="black-text">Method</label>
 			</div>
 		</div>
         <div class="row center m9 align ">
 			<div class="input-field col s8">
-				<textarea name="image" id="image" class="materialize-textarea"></textarea>
+				<textarea name="image" id="image" class="materialize-textarea">{{recipe.image}}</textarea>
 				<label for="icon_telephone" class="black-text">Image URL</label>
 			</div>
 			<div class="col  s4">
@@ -84,7 +84,7 @@ div class="container">
         <div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">http</i>
-				<textarea name="credit" id="credit" class="materialize-textarea"></textarea>
+				<textarea name="credit" id="credit" class="materialize-textarea">{{recipe.credit}}</textarea>
 				<label for="icon_telephone" class="black-text">Credit</label>
 			</div>
 		</div>
