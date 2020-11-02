@@ -81,7 +81,7 @@ def login():
 @app.route("/profile")
 def profile():
     # grab the session user's username from db
-    return render_template("profile.html")
+    return render_template("profile.html", recipes=mongo.db.recipes.find())
 
 
 @app.route("/logout")
@@ -155,6 +155,32 @@ def submit_recipes():
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Added , Thank you!")
         return redirect(url_for('profile'))
+
+
+@app.route('/edit_recipes/<recipe_id>', methods=["GET", "POST"])
+def edit_recipes(recipe_id):
+    # Allows updating of existing recipes 
+    if request.method == "POST":
+        recipe = {
+          "category_name": request.form.get("category_name"),
+          "image": request.form.get("image"),
+          "recipe_name": request.form.get("recipe_name"),
+          "recipe_description": request.form.get("recipe_description"),
+          "time_to_cook": request.form.get("time_to_cook"),
+          "prep_time": request.form.get("prep_time"),
+          "serves": request.form.get("serves"),
+          "ingredients": request.form.get("ingredients"),
+          "method": request.form.get("method"),
+          "user": session["users"],
+          "credit": request.form.get("credit")
+        }
+        mongo.db.recipes.update(
+            {'_id': ObjectId(recipe_id)}, recipe)
+        flash("Recipe Edited , Thank you!")
+        return redirect(url_for('profile'))
+    the_recipe = mongo.db.recipes.find_one(
+            {"_id": ObjectId(recipe_id)})
+    return render_template('editrecipe.html', recipe=the_recipe)
 
 
 if __name__ == "__main__":
