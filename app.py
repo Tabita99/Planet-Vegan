@@ -94,9 +94,10 @@ def logout():
 
 @app.route("/breakfast")
 def breakfast():
-    return render_template("breakfast.html", recipes=mongo.db.recipes.find(
-         {"category_name": "Breakfast"}
-    ))
+    return render_template(
+        "breakfast.html", recipes=mongo.db.recipes.find(
+         {"category_name": ObjectId("5f7b3d02080238ed1ae00951")}
+        ))
 
 
 @app.route("/lunch")
@@ -188,7 +189,6 @@ def delete_recipes(recipe_id):
     # Allows for the deleting of recipes
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('profile'))
-
 
 
 if __name__ == "__main__":
