@@ -103,21 +103,21 @@ def breakfast():
 @app.route("/lunch")
 def lunch():
     return render_template("lunch.html", recipes=mongo.db.recipes.find(
-         {"category_name": "Lunch"}
+         {"category_name": ObjectId("5f7b3d23080238ed1ae00952")}
     ))
 
 
 @app.route("/dinner")
 def dinner():
     return render_template("dinner.html", recipes=mongo.db.recipes.find(
-         {"category_name": "Dinner"}
+         {"category_name":  ObjectId("5f7b3d59080238ed1ae00954")}
     ))
 
 
 @app.route("/dessert")
 def dessert():
     return render_template("dessert.html", recipes=mongo.db.recipes.find(
-         {"category_name": "Dessert"}
+         {"category_name":  ObjectId("5f7b3d83080238ed1ae00955")}
     ))
 
 
