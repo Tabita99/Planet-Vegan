@@ -159,7 +159,7 @@ def submit_recipes():
 
 @app.route('/edit_recipes/<recipe_id>', methods=["GET", "POST"])
 def edit_recipes(recipe_id):
-    # Allows updating of existing recipes 
+    # Allows updating of existing recipes
     if request.method == "POST":
         recipe = {
           "category_name": request.form.get("category_name"),
@@ -181,6 +181,14 @@ def edit_recipes(recipe_id):
     the_recipe = mongo.db.recipes.find_one(
             {"_id": ObjectId(recipe_id)})
     return render_template('editrecipe.html', recipe=the_recipe)
+
+
+@app.route('/delete_recipes/<recipe_id>')
+def delete_recipes(recipe_id):
+    # Allows for the deleting of recipes
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('profile'))
+
 
 
 if __name__ == "__main__":
