@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
-	<div class="container">
+<div class="container">
 		<div class=" row">
 			<div class="card-panel z-depth-3 col m8 offset-m2 s12 ">
 				<h3 class="center-align profile-name">
@@ -21,15 +20,19 @@
 				<div class="card-content">
 					<h5 class="card-title activator grey-text text-darken-4 recipe-name">
 						{{recipe.recipe_name}}<i class="material-icons right">more_vert</i></h5>
-				    <a href="#" class="waves-effect waves-light btn-small green"><i class="material-icons left">add</i>Edit</a>
-				    <a href="#" class="waves-effect waves-light btn-small red"><i class="material-icons left">clear</i>Delete</a>
+				    <button  class="btn modal-trigger green edit-button"> 
+				      <a href="{{ url_for('edit_recipes', recipe_id=recipe._id) }}" class="waves-effect waves-light">
+                          <i class="material-icons left">add</i>Edit</a>
+                    </button>
+                      <button data-target="modal1" class="btn modal-trigger red"> 
+                          <i class="material-icons left">clear</i>Delete</button>
                     <div id="modal1" class="modal">
 							<div class="modal-content">
 								<h4>Are you sure you want to Delete?</h4>
 							</div>
 							<div class="modal-footer">
 								<a class="btn-floating btn  red"
-									href="#">Yes </a>
+									href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}">Yes </a>
 								<a class="btn-floating btn modal-close  green">No</a>
 
 							</div>
