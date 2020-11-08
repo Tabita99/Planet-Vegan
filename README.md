@@ -12,6 +12,17 @@
 This project is for people who are trying to go vegan or who are already. Allowing them to find a variety
 of recipes of their picking. The website layout will be simple, clean, consistent and easy to use.
 
+### User stories 
+
+* As a vegan I would like to find a variety different vegan recipes, that help broaden my vegan pallet.
+* As a meat-eater, I would like to substitute some of my meals with vegan meals.
+* As a long time vegan, I would like to share some of the recipes I've created throughout my journey.
+* As vegan student I would like to find simple vegan recipes on a budget. 
+* As a vegan, I would add some vegan meals on the website that are affordable and easy to make. 
+
+
+
+
 
 
  
