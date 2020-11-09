@@ -21,7 +21,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home_page")
 def home_page():
-    return render_template("home.html")
+    categories = list(mongo.db.category.find())
+    print("categories", categories)
+    return render_template("home.html", categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])
