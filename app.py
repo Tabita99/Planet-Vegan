@@ -123,7 +123,7 @@ def submit_recipes():
     # Allows you to submit recipes on  website
     if request.method == "POST":
         recipe = {
-          "category_name": request.form.get("category_name"),
+          "category_name": ObjectId(request.form.get("category_name")),
           "image": request.form.get("image"),
           "recipe_name": request.form.get("recipe_name"),
           "recipe_description": request.form.get("recipe_description"),
