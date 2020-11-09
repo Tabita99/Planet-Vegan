@@ -83,7 +83,7 @@ def login():
 @app.route("/profile")
 def profile():
     # grab the session user's username from db
-    return render_template("profile.html", recipes=mongo.db.recipes.find())
+    return render_template("profile.html",recipes=mongo.db.recipes.find(), categories=mongo.db.category.find())
 
 
 @app.route("/logout")
@@ -111,7 +111,7 @@ def open_recipe(recipe_id):
 
 # CRUD functionality for the recipe collection
 
-
+@app.route('/add_recipes')
 def add_recipes():
     categories = list(mongo.db.category.find())
     return render_template("addrecipes.html", categories=categories)
