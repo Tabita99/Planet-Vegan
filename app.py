@@ -110,14 +110,23 @@ def lunch():
 @app.route("/dinner")
 def dinner():
     return render_template("dinner.html", recipes=mongo.db.recipes.find(
-         {"category_name":  ObjectId("5f7b3d59080238ed1ae00954")}
+         {"category_name": ObjectId("5f7b3d59080238ed1ae00954")}
     ))
+
+
+@app.route("/category/<category_id>", methods=["GET"])
+def category_recipes(category_id):
+    category = mongo.db.category.find_one({"_id": ObjectId(category_id)})
+    print("category", category)
+    recipes = mongo.db.recipes.find({"category_name": ObjectId(category_id)})
+    return render_template(
+        "categories_recipes.html", recipes=recipes, category=category)
 
 
 @app.route("/dessert")
 def dessert():
     return render_template("dessert.html", recipes=mongo.db.recipes.find(
-         {"category_name":  ObjectId("5f7b3d83080238ed1ae00955")}
+         {"category_name": ObjectId("5f7b3d83080238ed1ae00955")}
     ))
 
 
@@ -127,7 +136,7 @@ def open_recipe(recipe_id):
     return render_template("recipe.html", recipe=get_recipe)
 
 
-# CRUD functionality for the recipe collection ]
+# CRUD functionality for the recipe collection 
 
 
 @app.route("/add_recipes")
@@ -153,6 +162,7 @@ def submit_recipes():
           "user": session["users"],
           "credit": request.form.get("credit")
         }
+        categories = mongo.db.categories
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Added , Thank you!")
         return redirect(url_for('profile'))
@@ -194,4 +204,4 @@ def delete_recipes(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)    
+            debug=True)
