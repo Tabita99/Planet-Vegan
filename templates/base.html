@@ -15,24 +15,19 @@
 
 	<!-- Dropdown Structure Desktop-->
 	<ul id="dropdown1" class="dropdown-content">
-		<li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
-		<li class="divider"></li>
-		<li><a href="{{ url_for('lunch') }}">Lunch</a></li>
-		<li class="divider"></li>
-		<li><a href="{{ url_for('dinner') }}">Dinner</a></li>
-		<li class="divider"></li>
-		<li><a href="{{ url_for('dessert') }}">Dessert</a></li>
+    {% for category in categories %}
+		<li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+    {% endfor %}
 	</ul>
+
 
 	<!-- Mobile Dropdown Structure -->
 	<ul id="mobile-dropdown" class="dropdown-content">
-		<li><a href="{{ url_for('breakfast') }}">Breakfast</a></li>
+		{% for category in categories %}
+		<li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
 		<li class="divider"></li>
-		<li><a href="{{ url_for('lunch') }}">Lunch</a></li>
-		<li class="divider"></li>
-		<li><a href="{{ url_for('dinner') }}">Dinner</a></li>
-		<li class="divider"></li>
-		<li><a href="{{ url_for('dessert') }}">Dessert</a></li>
+        {% endfor %}
+		
 	</ul>
 
 
@@ -48,7 +43,7 @@
 					<li><a class="dropdown-trigger" href="#"
 							data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 					<li><a href="{{ url_for('home_page') }}">Home</a></li>
-                {% if session.user %}
+                {% if session.users %}
 					<li><a href="{{ url_for('profile') }}">Profile</a></li>
                     <li><a href="{{ url_for('add_recipes') }}">Add Your Recipes</a></li>
 					<li><a href="{{ url_for('logout') }}">Logout</a></li>
@@ -64,7 +59,7 @@
 			<li><a class="dropdown-trigger" href="#"
 					data-target="mobile-dropdown">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 			<li><a href="{{ url_for('home_page') }}">Home</a></li>
-         {% if session.user %}
+         {% if session.users %}
 			<li><a href="{{ url_for('profile') }}">Profile</a></li>
             <li><a href="{{ url_for('add_recipes') }}">Add Your Recipes</a></li>
 			<li><a href="{{ url_for('logout') }}">Logout</a></li>
