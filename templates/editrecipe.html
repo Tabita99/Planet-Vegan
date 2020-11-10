@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-div class="container">
 <!-- layout inspired by  ajgoward-->
 <div class="container">
 	<div class="row">
@@ -34,11 +33,11 @@ div class="container">
         <div class="row">
 			<div class="input-field col s12">
 				<select  name="category_name" id="category_name" class="black-text">
-			               <option value="{{recipe.category_name}}">Choose your category</option>
-			               <option value="Breakfast">Breakfast</option>
-			               <option value="Lunch">Lunch</option>
-			               <option value="Dinner">Dinner</option>
-			               <option value="Dessert">Dessert</option>
+			               <option value="" disabled>Choose your category</option>
+                           {% for category in categories %}
+			               <option {% if category._id == recipe.category_name %}selected{%endif %} value="{{ category._id }}">
+                            {{ category.name }}</option>
+			               {% endfor %}
 			            </select>
 			</div>
         </div>
