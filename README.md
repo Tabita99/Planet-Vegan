@@ -20,6 +20,15 @@ of recipes of their picking. The website layout will be simple, clean, consisten
 * As vegan student I would like to find simple vegan recipes on a budget. 
 * As a vegan, I would add some vegan meals on the website that are affordable and easy to make. 
 
+### How this project will help them
+
+* Help the discover new vegan recipes
+* You can search the desired recipes in our search.
+* You can create an account on the website and add your recipes.
+* every recipe shows you the time it takes to cook and prepare.
+* There's an image of each recipe and you can also add your own.
+
+
 
 
 
