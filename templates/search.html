@@ -3,30 +3,17 @@
     <div class="parallax">
 	    <img class="background-image" src="static/images/vegan-picture.jpg" alt="vegan lunch">
     </div>
-	<div>
-		<h1 class="welcome-message">Welcome to everything Vegan!</h1>
-
+	<div class="row">
+		<h1 class="welcome-message">Search Result</h1>
+	</div>
 		<div class=" container">
-			<div class="row ">
-				<div class="col s12  welcome-text">
-					<p>
-						Welcome to Vegan Planet, where you can find different types of vegan recipes to make. You can
-						also,
-						add your own recipes that you've created on made during your vegan journey.You can find
-						alternatives
-						of all the different reciped you used to ejnoy before you journey and share with the vegan
-						community!
-					</p>
-					<br>
-					<p>Sign Up to get the full experience out webisite has to offer</p>
-				</div>
-			</div>
+			
 			<!--Search bar-->
 			<div class="row">
-				<form class="col s12"  action="" method="POST">
+				<form class="col s12"  action="{{ url_for('search') }}" method="POST">
 					<div class="row">
 						<div class="input-field col m8 offset-m2 s12 center search-bar">
-							<input id="query" name="query" type="text" class="validate">
+							<input id="query" name="query" type="text" class="validate" minlength="3">
 							<label for="query">Search Recipes </label>
 							<div class="col m8 s12">
 								<button class=" col m6 offset-m6  s4 offset-s4 btn-large waves-light green search"><i class="material-icons">search</i></button>
@@ -35,34 +22,8 @@
 					</div>
 				</form>
 			</div>
+
 		</div>
-        <div class="row cookie-row">
-            <div class="col s12 m6 l6 ">
-                <div class="breakfast">
-                   <a href="">Breakfast</a> 
-                </div>
-                <img class= "breakfast-pic" src="static/images/breakfast.jpg" alt="cookies">
-            </div>
-            <div class="col s12 m6 l6">
-                <div class="lunch"> <a href=""> Lunch</a></div>
-               <img class= "lunch-pic" src="static/images/vegan-lunch.jpg" alt="lunch"> 
-            </div>
-       </div>
-       <div class="row cookie-row">
-            <div class="col s12 m6 l6">
-               <div class="dinner">
-                  <a href="">Dinner</a>
-               </div>
-               <img class= "dinner-pic" src="static/images/vegan-greens.jpg" alt="dinner">
-            </div>
-            <div class="col s12 m6 l6">
-               <div class="desserts">
-                 <a href=""> Desserts</a> 
-               </div>
-              <img class= "cookie-pic" src="static/images/cookies.jpg" alt="cookies"> 
-            </div>
-       </div>
-    </div>
 
 
 {% endblock %}
