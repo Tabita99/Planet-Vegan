@@ -147,7 +147,7 @@ def edit_recipes(recipe_id):
     # Allows updating of existing recipes
     if request.method == "POST":
         recipe = {
-          "category_name": request.form.get("category_name"),
+          "category_name": ObjectId(request.form.get("category_name")),
           "image": request.form.get("image"),
           "recipe_name": request.form.get("recipe_name"),
           "recipe_description": request.form.get("recipe_description"),
@@ -167,7 +167,7 @@ def edit_recipes(recipe_id):
             {"_id": ObjectId(recipe_id)})
     return render_template(
         'editrecipe.html', recipe=the_recipe,
-        categories=mongo.db.category.find())
+        categories=list(mongo.db.category.find()))
 
 
 @app.route('/delete_recipes/<recipe_id>')
