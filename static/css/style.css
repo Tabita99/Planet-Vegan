@@ -62,6 +62,14 @@ a{
     list-style-type:none;
     font-size: xx-large}
 
+.recipe, .add-recipe {
+ font-family: 'Petit Formal Script', cursive, sans-serif;
+  text-decoration: underline;
+  font-size: xxx-large;
+  padding: 15px
+
+}
+
 
  
 /*--homepage--*/
