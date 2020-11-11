@@ -1,17 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 <h1 class="center-align">Recipe</h1>
 
-<div class="card">
+<div class="container">
 <!--layout inspired by cecilia binck-->
        <div>
           <h2 class= "center-align recipe-name"> </h2>
        </div>
        <!--row for recipe image, cooking time -->
 		<div class="row">
-			<div class="col s12 m4 left">
-				<img class="card-img card-panel" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
+			<div class="col s12 m6 left">
+				<img class="card-img card-panel col s12" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
 		    </div>
-			<div class=" card-panel  col s12 m4 right">
+			<div class=" card-panel  col s12 m6 right">
 				<p class="prep-time"><i class="material-icons prefix">query_builder</i>Prep Time:{{recipe.prep_time}} </p>
 				<p class="cook-time"><i class="material-icons prefix">hourglass_empty</i>Cook Time:{{recipe.time_to_cook}} </p>
 				<p class="serve"><i class="material-icons prefix">restaurant</i>Serves:{{recipe.serves}} </p>
