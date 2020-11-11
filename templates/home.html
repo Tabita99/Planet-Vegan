@@ -39,25 +39,43 @@
         <div class="row cookie-row">
             <div class="col s12 m6 l6 ">
                 <div class="breakfast">
-                   <a href="">Breakfast</a> 
+                  {% for category in categories %}
+                   {% if category.name == "Breakfast" %}
+                     <li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+                   {% endif %}
+                {% endfor  %}
                 </div>
                 <img class= "breakfast-pic" src="static/images/breakfast.jpg" alt="cookies">
             </div>
             <div class="col s12 m6 l6">
-                <div class="lunch"> <a href=""> Lunch</a></div>
+                <div class="lunch"> 
+                  {% for category in categories %}
+                  {% if category.name == "Lunch" %}
+                    <li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+                   {% endif %}
+                {% endfor  %}
+                </div>
                <img class= "lunch-pic" src="static/images/vegan-lunch.jpg" alt="lunch"> 
             </div>
        </div>
        <div class="row cookie-row">
             <div class="col s12 m6 l6">
                <div class="dinner">
-                  <a href="">Dinner</a>
+                  {% for category in categories %}
+                  {% if category.name == "Dinner" %}
+                    <li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+                   {% endif %}
+                {% endfor  %}
                </div>
                <img class= "dinner-pic" src="static/images/vegan-greens.jpg" alt="dinner">
             </div>
             <div class="col s12 m6 l6">
                <div class="desserts">
-                 <a href=""> Desserts</a> 
+               {% for category in categories %}
+                  {% if category.name == "Dessert" %}
+                    <li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+                   {% endif %}
+                {% endfor  %}
                </div>
               <img class= "cookie-pic" src="static/images/cookies.jpg" alt="cookies"> 
             </div>
