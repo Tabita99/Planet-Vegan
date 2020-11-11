@@ -106,7 +106,7 @@ def category_recipes(category_id):
         categories=mongo.db.category.find())
 
 
-@app.route("/open_recipe /<recipe_id>")
+@app.route("/open_recipe/<recipe_id>")
 def open_recipe(recipe_id):
     get_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipe.html", recipe=get_recipe)
@@ -175,6 +175,18 @@ def delete_recipes(recipe_id):
     # Allows for the deleting of recipes
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('profile'))
+
+
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    if request.method == "POST":
+        query = request.form.get('query')
+        recipes = mongo.db.recipes.find({'$text': {"$search": query}})
+        print(query)
+        print(recipes)
+        return render_template("search.html", recipes=recipes)
+    else:
+        return render_template('search.html')
 
 
 if __name__ == "__main__":
