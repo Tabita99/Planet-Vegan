@@ -31,6 +31,10 @@ footer {
    background-color: #0a9c0a
 }
 
+.sidenav li>a, .dropdown-content li>a{
+    color:#0a9c0a;
+    
+}
 a{
     color: black;
 }
