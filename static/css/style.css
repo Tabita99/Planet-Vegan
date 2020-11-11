@@ -39,7 +39,11 @@ a{
 .welcome-message, .sign-up, .login, .profile-name, .brand-logo{
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
-
+.nav-wrapper li{
+    font-family: 'Petit Formal Script', cursive, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
 .category-font {
     font-family: 'Petit Formal Script', cursive, sans-serif; 
     font-weight: normal;
