@@ -40,7 +40,7 @@ a{
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
 
-.breakfast-catergory {
+.category-font {
     font-family: 'Petit Formal Script', cursive, sans-serif; 
     font-weight: normal;
     font-size: xxx-large;
@@ -53,12 +53,7 @@ a{
     text-decoration: underline;
     list-style-type:none;}
 
-.dinner {
-    font-family: 'Petit Formal Script', cursive, sans-serif;
-    font-weight: bold;
-    text-decoration: underline;
-    padding-bottom: 10px;
-}
+
  
 /*--homepage--*/
 body{
