@@ -51,7 +51,7 @@ a{
     font-weight:bold;
     padding: 15px 15px;
     text-decoration: underline;
-}
+    list-style-type:none;}
 
 .dinner {
     font-family: 'Petit Formal Script', cursive, sans-serif;
