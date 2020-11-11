@@ -36,7 +36,7 @@ a{
 }
 
 /*--fonts--*/
-.welcome-message, .sign-up, .login, .profile-name{
+.welcome-message, .sign-up, .login, .profile-name, .brand-logo{
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
 
@@ -51,7 +51,8 @@ a{
     font-weight:bold;
     padding: 15px 15px;
     text-decoration: underline;
-    list-style-type:none;}
+    list-style-type:none;
+    font-size: xx-large}
 
 
  
@@ -61,7 +62,6 @@ body{
     font-size: large;
 }
   
-/*--homepage--*/
  .background-image{
    width: 100%;  
  }
@@ -73,6 +73,7 @@ body{
 .cookie-pic, .breakfast-pic, .lunch-pic, .dinner-pic{
     width: 100%;
 }
+
 /*--change ths class later--*/
  .cookie-row{
      position: relative;
