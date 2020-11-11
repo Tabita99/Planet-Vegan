@@ -109,7 +109,7 @@ def category_recipes(category_id):
 @app.route("/open_recipe/<recipe_id>")
 def open_recipe(recipe_id):
     get_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("recipe.html", recipe=get_recipe)
+    return render_template("recipe.html", recipe=get_recipe, categories=mongo.db.category.find())
 
 
 # CRUD functionality for the recipe collection
@@ -184,9 +184,9 @@ def search():
         recipes = mongo.db.recipes.find({'$text': {"$search": query}})
         print(query)
         print(recipes)
-        return render_template("search.html", recipes=recipes)
+        return render_template("search.html", recipes=recipes, categories=mongo.db.category.find())
     else:
-        return render_template('search.html')
+         return render_template('search.html', categories=mongo.db.category.find())
 
 
 if __name__ == "__main__":
