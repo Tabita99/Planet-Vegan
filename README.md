@@ -61,6 +61,11 @@ I kept the font styling simple using two fonts. I Used Google Font Awesome to se
 I used Roboto font style for any message such recipes method, recipe title and welcome message because it's a simple and easy
 read. I used Petit Formal Script' for the title such navbar and categories title, to make the website more visually appealing.
 
+### Colours
+I used a maximumof three colours for my website, which where green, dark grey and white. I only used three colours to give my 
+website a cleaner look and make it flow well. I used green for the navbar and footer. i choose green because my website is 
+vegan site and that's mostly a plant based diet. I used white for my navbar titles, and i used dark grey for the rest of the
+fonts.Also made my catgory dropdow gree to keep with theme. The colours on my website were consistent and minimal.
 
 
 
