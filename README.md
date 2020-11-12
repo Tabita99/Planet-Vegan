@@ -67,6 +67,12 @@ website a cleaner look and make it flow well. I used green for the navbar and fo
 vegan site and that's mostly a plant based diet. I used white for my navbar titles, and i used dark grey for the rest of the
 fonts.Also made my catgory dropdow gree to keep with theme. The colours on my website were consistent and minimal.
 
+### Navbar 
+The navbar consists of a Recipes dropdown list showing all the recipe categories, Home, Login and Sign Up. When you 
+login, the Login is removed, and Logout, Add Your Recipes and Profile can be viewed.
+The side nav on the mobile device appears on the right.
+
+
 ### Home Page 
 The home page consists of a picture of a vegan dish with a welcome message, welcoming everyone to the page. They're also a
 search bar for searching recipes of your choice. Above the search, there's a message encouraging you to sign up. 
