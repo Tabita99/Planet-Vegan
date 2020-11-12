@@ -118,6 +118,14 @@ login on my website to check it's the functionality of the website for all pages
 my CSS and HTML code most of the errors I got was due to the system not recognising my jinja template. I used Unicorn revealer when I had an issue with my 
 layout when my images were overflowing that helped me find the issues.
 
+### Testing Python
+I used the Flask app debugger to test the functionality of my website every time I created my @app route and functions to see if I was working. 
+When creating my methods of  POST and GET to get a retrieve someone's login. I would check my terminal where my python app.py was running to 
+see it was getting and posting as required, also checking to see what the HTTP response code was. This was very useful when checking when 
+creating my python functions to look for error when something was working because sometimes I may have forgotten to add the method on my from
+and that would be causing the issue.
+
+
 
 
 
