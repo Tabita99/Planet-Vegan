@@ -85,6 +85,18 @@ details on the form. The login page has a link the redirects you to the sign-up 
 page vice versa. If you log in with incorrect details, a message will flash telling you. When you're signing up if the username
 you've typed is already taken a message will flash informing you.
 
+### Profile Page 
+When you log in, you're taken to your profile page and the profile stores any recipes that you've already created. However 
+if you do not have any recipes, the profile page is empty and only show Username's Profile Title at the top.
+
+### Add Your Recipes Page
+This page allows you to upload your recipes on the site. There's a form to fill,  with text areas such as recipe name, description,
+method etc. When you've finished, you can upload the recipe. The recipe saved in your profile page
+
+### Edit and Delete Button 
+The website allows you to delete and edit your the existing recipes you've created. When you go to your profile page or,
+Search your recipe there will be an edit and delete button on your recipe.
+
 
 
  
