@@ -97,6 +97,16 @@ method etc. When you've finished, you can upload the recipe. The recipe saved in
 The website allows you to delete and edit your the existing recipes you've created. When you go to your profile page or,
 Search your recipe there will be an edit and delete button on your recipe.
 
+### Categories Page
+Dropdown takes you to the different category pages, where you can find meals to make a form that category.
+The categories are Breakfast, Lunch, Dinner and Dessert.
+
+### Recipe Page 
+when you shown a recipe , you're only shown a preview showing the name. Then you you click the card the icon on 
+the side it reveals a little more information about the recipe such as how time to make, prep time and serves.
+it aslo provides you with a open button. This will  take you the recipe page where you can view the ingredients,
+method of making the recipe.
+
 
 
  
