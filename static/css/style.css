@@ -52,6 +52,8 @@ a{
     font-family: 'Petit Formal Script', cursive, sans-serif; 
     font-weight: normal;
     font-size: xxx-large;
+    text-decoration: underline;
+
 }
 
 .breakfast, .lunch, .dinner, .desserts{
@@ -105,9 +107,10 @@ body{
 }
 
 .card .card-title {
-    font-size: 15px;
+    font-weight: 400;
  
 }
+
 /*--media queries--*/
 
 @media only screen and (min-width: 992x) {
@@ -120,5 +123,13 @@ body{
     .background-image{
         height: 80vh;
     }
+}
+
+@media only screen and (min-width: 600px) {
+    .card .card-title {
+    font-size: 16px;
+    font-weight: 500;
+ 
+}
 }
 
