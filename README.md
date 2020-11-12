@@ -54,6 +54,13 @@ of recipes of their picking. The website layout will be simple, clean, consisten
 2. I would like to introduce more cateogries to the website and allow for a wider range of recipes.
 3. Allow people the option to upload videos with their recipes if they want to give people a tutorial that people can follow.
 
+## Design
+
+### Font 
+I kept the font styling simple using two fonts. I Used Google Font Awesome to select my chosen font and apply them to my website.
+I used Roboto font style for any message such recipes method, recipe title and welcome message because it's a simple and easy
+read. I used Petit Formal Script' for the title such navbar and categories title, to make the website more visually appealing.
+
 
 
 
