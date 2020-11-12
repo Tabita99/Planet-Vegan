@@ -27,6 +27,7 @@ footer {
 }
 
 
+
 /*-- colour--*/
 .nav-colour, .footer {
    background-color: #0a9c0a
@@ -74,7 +75,6 @@ a{
 }
 
 
- 
 /*--homepage--*/
 body{
     font-family: Roboto, sans-serif;
@@ -130,13 +130,17 @@ body{
     .card .card-title {
     font-size: 15px;
     font-weight: 500;
+    white-space: nowrap;
  
 }
 
 }
 @media only screen and (max-width: 992px){
 nav .brand-logo {
-    font-size: 23px
+    font-size: 23px;
+    white-space: nowrap;
     
 }
 }
+
+
