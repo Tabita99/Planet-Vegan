@@ -162,6 +162,21 @@ for loop and if statement and where I had placed them. To resolve these issue I 
 you're description because it was not being retrieved in MongoDB. Quickly resolved by adding a recipes description text area
 so when trying to edit your recipe.
 
+## Technologies Used
+
+1. HTML & CSS Progamming languages 
+2. [MongoDB](https://account.mongodb.com/): to create my database schema.
+3. [Materialize](https://materializecss.com/): to make a responsive frontend framwork, get designs
+4. [GitHub](https://github.com/):  Repository host for project and previe live website.
+5. [GIT](https://git-scm.com/): Used for version control 
+6. [Font Awesome](https://fontawesome.com/): Used for Social media icons e.g. facebook, twitter and instagram.
+7. [Google Fonts](https://fonts.google.com/): Tanagerine, Roboto and Lato  
+8. Google Chrome developer was the main tool used to check that my website was responsive on all screen sizes.
+9. [W3C Markup Validation](https://validator.w3.org/)  HTML validation.
+10. [W3C CSS validation](https://jigsaw.w3.org/css-validator/) CSS validation.
+11. [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) rectify overflow issues.
+12. [Python Tester](https://extendsclass.com/python-tester.html) validate my app.py.
+13. [Heroku](https://www.heroku.com/)built my app on.
 
 
 
