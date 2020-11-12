@@ -23,7 +23,9 @@ mongo = PyMongo(app)
 def home_page():
     categories = list(mongo.db.category.find())
     print("categories", categories)
-    return render_template("home.html", categories=categories)
+    return render_template(
+        "home.html", categories=categories,
+        categories_one=mongo.db.category.find())
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -47,7 +49,9 @@ def register():
         session["users"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile"))
-    return render_template("signup.html", categories=mongo.db.category.find())
+    return render_template(
+        "signup.html", categories=mongo.db.category.find(),
+        categories_one=mongo.db.category.find())
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -70,14 +74,17 @@ def login():
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
+                return redirect(url_for(
+                    "login"))
 
         else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html", categories=mongo.db.category.find())
+    return render_template(
+        "login.html", categories=mongo.db.category.find(),
+        categories_one=mongo.db.category.find())
 
 
 @app.route("/profile")
@@ -85,7 +92,8 @@ def profile():
     # grab the session user's username from db
     return render_template(
         "profile.html", recipes=mongo.db.recipes.find(),
-        categories=mongo.db.category.find())
+        categories=mongo.db.category.find(),
+        categories_one=mongo.db.category.find())
 
 
 @app.route("/logout")
@@ -93,7 +101,9 @@ def logout():
     # remove user from session cookie
     flash("You have been logged out")
     session.pop("users")
-    return redirect(url_for("login", categories=mongo.db.category.find()))
+    return redirect(url_for(
+        "login", categories=mongo.db.category.find(),
+        categories_one=mongo.db.category.find()))
 
 
 @app.route("/category/<category_id>", methods=["GET"])
@@ -103,13 +113,16 @@ def category_recipes(category_id):
     recipes = mongo.db.recipes.find({"category_name": ObjectId(category_id)})
     return render_template(
         "categories_recipes.html", recipes=recipes, category=category,
-        categories=mongo.db.category.find())
+        categories=mongo.db.category.find(),
+        categories_one=mongo.db.category.find())
 
 
 @app.route("/open_recipe/<recipe_id>")
 def open_recipe(recipe_id):
     get_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("recipe.html", recipe=get_recipe, categories=mongo.db.category.find())
+    return render_template(
+        "recipe.html", recipe=get_recipe, categories=mongo.db.category.find(),
+        categories_one=mongo.db.category.find())
 
 
 # CRUD functionality for the recipe collection
@@ -117,7 +130,9 @@ def open_recipe(recipe_id):
 @app.route('/add_recipes')
 def add_recipes():
     categories = list(mongo.db.category.find())
-    return render_template("addrecipes.html", categories=categories)
+    return render_template(
+        "addrecipes.html", categories=categories,
+        categories_one=mongo.db.category.find())
 
 
 @app.route('/submit_recipes', methods=["POST"])
@@ -167,7 +182,8 @@ def edit_recipes(recipe_id):
             {"_id": ObjectId(recipe_id)})
     return render_template(
         'editrecipe.html', recipe=the_recipe,
-        categories=list(mongo.db.category.find()))
+        categories=list(mongo.db.category.find(),
+         categories_one=mongo.db.category.find()))
 
 
 @app.route('/delete_recipes/<recipe_id>')
@@ -184,9 +200,14 @@ def search():
         recipes = mongo.db.recipes.find({'$text': {"$search": query}})
         print(query)
         print(recipes)
-        return render_template("search.html", recipes=recipes, categories=mongo.db.category.find())
+        return render_template(
+            "search.html", recipes=recipes,
+            categories=mongo.db.category.find(),
+            categories_one=mongo.db.category.find())
     else:
-         return render_template('search.html', categories=mongo.db.category.find())
+        return render_template(
+            'search.html', categories=mongo.db.category.find(),
+            categories_one=mongo.db.category.find())
 
 
 if __name__ == "__main__":
