@@ -26,6 +26,7 @@ footer {
   height: 50px;
 }
 
+
 /*-- colour--*/
 .nav-colour, .footer {
    background-color: #0a9c0a
@@ -127,7 +128,7 @@ body{
 
 @media only screen and (min-width: 600px) {
     .card .card-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
  
 }
