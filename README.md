@@ -107,6 +107,22 @@ the side it reveals a little more information about the recipe such as how time 
 it aslo provides you with a open button. This will  take you the recipe page where you can view the ingredients,
 method of making the recipe.
 
+## Testing 
+
+### General Testing 
+I used chrome Dev tools to preview my code. When writing a a code espcially hmtl and css  i would preview it in chrome Dev
+tools to checking if it's working. If if wasn't working how i desired, i would check the element section in dev tools and 
+try to locate the issue. I'd also try  firstly type my css on the Dev tools to see how it looked before typing it on my 
+style.css page to see if i was happy with the outcome then commit. Also used Dev tool to make my website responisive only 
+every device , adding media queries for devices i saw my website wasn't responisive on. I mad a login to check the 
+the functionalit  of the website for all pages and how every page operated.
+I also used CCS and HTML Validator to check my CSS and HTML code most of the errors i got was due the system not
+reconginsing my jinja template. I used Unicorn revealer when i had issue with my layout, when my images were over flowing 
+that helped me locate my issues.
+
+
+
+
 
 
  
