@@ -17,17 +17,18 @@
 	<ul id="dropdown1" class="dropdown-content">
     {% for category in categories %}
 		<li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+        <li class="divider"></li>
     {% endfor %}
 	</ul>
 
 
 	<!-- Mobile Dropdown Structure -->
+
 	<ul id="mobile-dropdown" class="dropdown-content">
-		{% for category in categories %}
+	{% for category in categories_one %}
 		<li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
 		<li class="divider"></li>
-        {% endfor %}
-		
+    {% endfor %}	
 	</ul>
 
 
@@ -40,7 +41,7 @@
 					class="sidenav-trigger right"><i class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
 					<!-- Dropdown Trigger -->
-					<li><a class="dropdown-trigger" href="#"
+					<li><a class="dropdown-trigger" href=""
 							data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
 					<li><a href="{{ url_for('home_page') }}">Home</a></li>
                 {% if session.users %}
@@ -65,7 +66,6 @@
 			<li><a href="{{ url_for('logout') }}">Logout</a></li>
          {% else %}
 			<li><a href="{{ url_for('login') }}">Login</a></li>
-			<li><a href="">Logout</a></li>
 			<li><a href="{{ url_for('register') }}">Sign Up</a></li>
          {% endif %}
 		</ul>
