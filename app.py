@@ -182,8 +182,8 @@ def edit_recipes(recipe_id):
             {"_id": ObjectId(recipe_id)})
     return render_template(
         'editrecipe.html', recipe=the_recipe,
-        categories=list(mongo.db.category.find(),
-         categories_one=mongo.db.category.find()))
+        categories=list(mongo.db.category.find()),
+        categories_one=mongo.db.category.find())
 
 
 @app.route('/delete_recipes/<recipe_id>')
