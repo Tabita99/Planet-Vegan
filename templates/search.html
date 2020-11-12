@@ -5,7 +5,7 @@
 	        </div>
 			<!--Search bar-->
 			<div class="row">
-				<form class="col s12"  action="{{ url_for('search') }}" method="POST">
+				<form class="col s12" action="{{ url_for('search') }}" method="POST">
 					<div class="row">
 						<div class="input-field col m8 offset-m2 s12 center search-bar">
 							<input id="query" name="query" type="text" class="validate" minlength="3">
@@ -23,57 +23,58 @@
 				<div class="card col m4 offset-m1 s12">
 					<div class="card-image waves-effect waves-block waves-light ">
 						<img class="responsive-img activator" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
-			            </div>
+						            </div>
 			
 						<div class="card-content">
 							<h5 class="card-title activator grey-text text-darken-4 recipe-name">
 								{{recipe.recipe_name}}<i class="material-icons right">more_vert</i></h5>
-                            {% if session.users %}
+							{% if session.users %}
 							<button  class="btn modal-trigger green edit-button">
-										      <a href="{{ url_for('edit_recipes', recipe_id=recipe._id) }}" class="waves-effect waves-light">
-						                          <i class="material-icons left">add</i>Edit</a>
-						                    </button>
+													      <a href="{{ url_for('edit_recipes', recipe_id=recipe._id) }}" class="waves-effect waves-light">
+									                          <i class="material-icons left">add</i>Edit</a>
+									                    </button>
 							<button data-target="modal1" class="btn modal-trigger red">
-						                          <i class="material-icons left">clear</i>Delete</button>
+									                          <i class="material-icons left">clear</i>Delete</button>
 							<div id="modal1" class="modal">
 								<div class="modal-content">
 									<h4>Are you sure you want to Delete?</h4>
 								</div>
 								<div class="modal-footer">
-									<a class="btn-floating btn  red" href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}">Yes </a>
+									<a class="btn-floating btn  red"
+										href="{{ url_for('delete_recipes', recipe_id=recipe._id) }}">Yes </a>
 									<a class="btn-floating btn modal-close  green">No</a>
-						
+			
 								</div>{% endif %}
 							</div>
-						<!-- back of the card  (layout copied from cecilia binck) -->  
-						<div class="card-reveal">
-							<div class="row col s12 ">
-								<h5 class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></h5>
-							</div>
-							<div class="row col s12 card-middle">
-								<div class="col s4"> <i class="material-icons prefix light-green">query_builder</i>
-									<p>{{recipe.prep_time}}</p>
-									<p>Prep</p>
+							<!-- back of the card  (layout copied from cecilia binck) -->
+							<div class="card-reveal">
+								<div class="row col s12 ">
+									<h5 class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></h5>
 								</div>
-								<div class="col s4"> <i class="material-icons prefix light-green">hourglass_empty</i>
-									<p>{{recipe.time_to_cook}}</p>
-									<p>Cook</p>
+								<div class="row col s12 card-middle">
+									<div class="col s4"> <i class="material-icons prefix light-green">query_builder</i>
+										<p>{{recipe.prep_time}}</p>
+										<p>Prep</p>
+									</div>
+									<div class="col s4"> <i class="material-icons prefix light-green">hourglass_empty</i>
+										<p>{{recipe.time_to_cook}}</p>
+										<p>Cook</p>
+									</div>
+									<div class="col s4"> <i class="material-icons prefix light-green">restaurant</i>
+										<p>{{recipe.serves}}</p>
+										<p>Serves</p>
+									</div>
 								</div>
-								<div class="col s4"> <i class="material-icons prefix light-green">restaurant</i>
-									<p>{{recipe.serves}}</p>
-									<p>Serves</p>
+								<div class="card-end col s12">
+									<p>{{recipe.recipe_description}}</p>
+									<p> credit: {{recipe.credit}}</p>
 								</div>
-							</div>
-							<div class="card-end col s12">
-								<p>{{recipe.recipe_description}}</p>
-								<p> credit: {{recipe.credit}}</p>
-							</div>
-							<div class="button col s12 center-align">
-								<a href="{{ url_for('open_recipe', recipe_id=recipe._id) }}"
-									class="waves-effect waves-light open btn btn_small light-green">Open Recipe</a>
+								<div class="button col s12 center-align">
+									<a href="{{ url_for('open_recipe', recipe_id=recipe._id) }}"
+										class="waves-effect waves-light open btn btn_small light-green">Open Recipe</a>
+								</div>
 							</div>
 						</div>
+                        {% endfor %}
 					</div>
-				</div>
-					{% endfor %}
 {% endblock %}
