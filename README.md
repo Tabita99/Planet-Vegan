@@ -110,15 +110,13 @@ method of making the recipe.
 ## Testing 
 
 ### General Testing 
-I used chrome Dev tools to preview my code. When writing a a code espcially hmtl and css  i would preview it in chrome Dev
-tools to checking if it's working. If if wasn't working how i desired, i would check the element section in dev tools and 
-try to locate the issue. I'd also try  firstly type my css on the Dev tools to see how it looked before typing it on my 
-style.css page to see if i was happy with the outcome then commit. Also used Dev tool to make my website responisive only 
-every device , adding media queries for devices i saw my website wasn't responisive on. I mad a login to check the 
-the functionalit  of the website for all pages and how every page operated.
-I also used CCS and HTML Validator to check my CSS and HTML code most of the errors i got was due the system not
-reconginsing my jinja template. I used Unicorn revealer when i had issue with my layout, when my images were over flowing 
-that helped me locate my issues.
+I used chrome Dev tools to preview my code. When writing my code, especially, HTML and CSS, I would preview it in chrome Dev
+tools to checking if it's working. If there was an issue, I would check the element section in dev tools and try to find the issue.
+I'd also try firstly type my CSS on the Dev tools to see how it looked before typing it on my CSS page to see if I was happy with the outcome then commit.
+Also used Dev tool to make my website responsive only every device, adding media queries for devices I saw my website wasn't responsive on. I created a 
+login on my website to check it's the functionality of the website for all pages and how every page operated.I also used CCS and HTML Validator to check
+my CSS and HTML code most of the errors I got was due to the system not recognising my jinja template. I used Unicorn revealer when I had an issue with my 
+layout when my images were overflowing that helped me find the issues.
 
 
 
