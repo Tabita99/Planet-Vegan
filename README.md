@@ -79,6 +79,11 @@ search bar for searching recipes of your choice. Above the search, there's a mes
 Underneath are four meal categories along with a picture of a meal from said category. If you click a category name,
 it should take you the recipes from that category.
 
+### Login and Sign Up Page 
+Both pages are identical and only differ in the instructions given to tell you to either login or sign up when entering your 
+details on the form. The login page has a link the redirects you to the sign-up page if you're not a member and the Sign-Up 
+page vice versa. If you log in with incorrect details, a message will flash telling you. When you're signing up if the username
+you've typed is already taken a message will flash informing you.
 
 
 
