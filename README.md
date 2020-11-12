@@ -125,6 +125,47 @@ see it was getting and posting as required, also checking to see what the HTTP r
 creating my python functions to look for error when something was working because sometimes I may have forgotten to add the method on my from
 and that would be causing the issue.
 
+### Issues and Resolutions 
+
+* When creating my dropdown list for my category on my navbar using materialise. The jquery would only activate the dropdown on the desktop 
+  and not the mobile side nav. This was resolved, by creating a separate and dropdown list for the desktop and mobile device and targeting 
+  the dropdown separately in jquery. 
+
+* This issues was about my schema data on MongoDB, I had created and stored all my recipes on MongoDB by hand and used a struggling value 
+to story my category. This was an issue because I had created four HTML pages for each recipe category. I could not retrieve the recipe
+categories by iterating through them due to an error in the categories collection. This was resolved by removing all recipes for my 
+categories collection, and changing the value for category_name  field on collection to objectId so that each recipe had a unique id that
+could not be changed. I created a category id function that allowed to find the categories and their objectId.This allowed me to iterate
+through the categories to retrieve them all so they could appear on my dropdown list. This meant I could delete all  the HTML pages I 
+made for the recipe  categories and just have one HTML page for all categories and iterate through them using template jinja and also
+delete my python functions for them, which meant less code and better functionality.
+
+* When creating my the card panel to store my recipes they were some minor issues with responsiveness. The recipes on the tablet
+devices where not in rows of two and would overlap each other. This was easily solved by changing font sizes of the recipes
+names on the tablet devices using media queries.
+
+* My dropdown list for my recipes categories would not appear on my mobile side nav. Whilst it was appearing on my desktop view,
+the issue is Flask only allows for loop to used once. I was using it twice as the loop on my desktop and my mobile device, 
+regardless of which device I was using. To resolve this issue, I assigned categories to two different
+variables so they could be used in different loops, one to be used to call the desktop dropdown list and the other the mobile dropdown.
+
+
+* I had an issue with my search engine to retrieving the items searches and just redirecting me back to my search page.
+I found that did not add the method to the form and that was the issue with my search
+and changing  my query to from request.arg to request.form as it was looking for an argument and I had set none and that was
+also causing an issue.
+
+*  I had a lot issue with my recipes overflowing and making my website unresponsive and this was because of the of jinja template
+for loop and if statement and where I had placed them. To resolve these issue I just had to change their placements.
+
+* My Recipe form  to edit recipes did not have a text area for recipe description so each time, you'd try to get the recipe you'd have to re-enter
+you're description because it was not being retrieved in MongoDB. Quickly resolved by adding a recipes description text area
+so when trying to edit your recipe.
+
+
+
+
+
 
 
 
