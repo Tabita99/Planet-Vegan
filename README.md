@@ -28,7 +28,9 @@ of recipes of their picking. The website layout will be simple, clean, consisten
 * every recipe shows you the time it takes to cook and prepare.
 * There's an image of each recipe and you can also add your own.
 
-## Existing Features
+## Features
+
+###  Existing Features
 1. Home Page - includes a header image and 4 images for each category, and a URL link to take you to the category pages.
    The home page also includes a search bar to search recipes of your choice.
 2. Recipe Dropdown -website includes a dropdown list for categories Breakfast, Lunch, Dinner and Desserts,
@@ -44,6 +46,16 @@ of recipes of their picking. The website layout will be simple, clean, consisten
 9. Categories- website included four categories, Breakfast, Lunch, Dinner and Desserts, it takes you to their page where you can view the recipes in said categories. 
 10. Recipe layout - You're shown a snippet of the recipe and you click on the open button to show you the full recipe.
 11. logout -  logs you out and takes you back the homepage.
+
+### Features Left to Implement
+
+1. I would like to introduce a comment section. Where underneath every recipes, people are able to comment
+   on the recipes and over suggestions. People Should also be able to reply to the comments and havea conversation.
+2. I would like to introduce more cateogries to the website and allow for a wider range of recipes.
+3. Allow people the option to upload videos with their recipes if they want to give people a tutorial that people can follow.
+
+
+
 
  
 
