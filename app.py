@@ -21,6 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home_page")
 def home_page():
+    # renders home page and get category list for both dropdowns
     categories = list(mongo.db.category.find())
     print("categories", categories)
     return render_template(
@@ -50,6 +51,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for("profile"))
     return render_template(
+        # find categories to display both dropdowns
         "signup.html", categories=mongo.db.category.find(),
         categories_one=mongo.db.category.find())
 
@@ -83,6 +85,7 @@ def login():
             return redirect(url_for("login"))
 
     return render_template(
+        # find categories to display both dropdowns
         "login.html", categories=mongo.db.category.find(),
         categories_one=mongo.db.category.find())
 
@@ -91,6 +94,7 @@ def login():
 def profile():
     # grab the session user's username from db
     return render_template(
+        # find categories to display both dropdowns
         "profile.html", recipes=mongo.db.recipes.find(),
         categories=mongo.db.category.find(),
         categories_one=mongo.db.category.find())
@@ -102,16 +106,19 @@ def logout():
     flash("You have been logged out")
     session.pop("users")
     return redirect(url_for(
+        # find categories to display both dropdowns
         "login", categories=mongo.db.category.find(),
         categories_one=mongo.db.category.find()))
 
 
 @app.route("/category/<category_id>", methods=["GET"])
 def category_recipes(category_id):
+    # grabs the category id's from the db
     category = mongo.db.category.find_one({"_id": ObjectId(category_id)})
     print("category", category)
     recipes = mongo.db.recipes.find({"category_name": ObjectId(category_id)})
     return render_template(
+        # find categories to display both dropdowns
         "categories_recipes.html", recipes=recipes, category=category,
         categories=mongo.db.category.find(),
         categories_one=mongo.db.category.find())
@@ -119,8 +126,10 @@ def category_recipes(category_id):
 
 @app.route("/open_recipe/<recipe_id>")
 def open_recipe(recipe_id):
+    # grabs selected recipe from db
     get_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template(
+        # find categories to display both dropdowns
         "recipe.html", recipe=get_recipe, categories=mongo.db.category.find(),
         categories_one=mongo.db.category.find())
 
@@ -131,13 +140,14 @@ def open_recipe(recipe_id):
 def add_recipes():
     categories = list(mongo.db.category.find())
     return render_template(
+        # find categories to display both dropdowns
         "addrecipes.html", categories=categories,
         categories_one=mongo.db.category.find())
 
 
 @app.route('/submit_recipes', methods=["POST"])
 def submit_recipes():
-    # Allows you to submit recipes on  website
+    # submitting recipes on website
     if request.method == "POST":
         recipe = {
           "category_name": ObjectId(request.form.get("category_name")),
@@ -159,7 +169,7 @@ def submit_recipes():
 
 @app.route('/edit_recipes/<recipe_id>', methods=["GET", "POST"])
 def edit_recipes(recipe_id):
-    # Allows updating of existing recipes
+    # updating of existing recipes
     if request.method == "POST":
         recipe = {
           "category_name": ObjectId(request.form.get("category_name")),
@@ -181,6 +191,7 @@ def edit_recipes(recipe_id):
     the_recipe = mongo.db.recipes.find_one(
             {"_id": ObjectId(recipe_id)})
     return render_template(
+        # find categories to display both dropdowns
         'editrecipe.html', recipe=the_recipe,
         categories=list(mongo.db.category.find()),
         categories_one=mongo.db.category.find())
@@ -195,17 +206,20 @@ def delete_recipes(recipe_id):
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
+    # retrieve recipe based on searched words
     if request.method == "POST":
         query = request.form.get('query')
         recipes = mongo.db.recipes.find({'$text': {"$search": query}})
         print(query)
         print(recipes)
         return render_template(
+            # find categories to display both dropdowns
             "search.html", recipes=recipes,
             categories=mongo.db.category.find(),
             categories_one=mongo.db.category.find())
     else:
         return render_template(
+            # find categories to display both dropdowns
             'search.html', categories=mongo.db.category.find(),
             categories_one=mongo.db.category.find())
 
