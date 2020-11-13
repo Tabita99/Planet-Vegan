@@ -9,24 +9,24 @@
 	</div>
 	<form class="col s12"  method="POST" action="{{ url_for('submit_recipes') }}">
         <div class="row">
-			<div class="input-field col s6">
+			<div class="input-field col m6 s12">
 				<i class="material-icons prefix">assignment</i>
-				<input id="recipe_name" name="recipe_name" type="text" class="validate">
+				<input id="recipe_name" name="recipe_name" type="text" class="validate" required>
 				<label for="icon_prefix" class="black-text">Recipe Name</label>
 			</div>
-			<div class="input-field col s6">
+			<div class="input-field col m6 s12">
 				<i class="material-icons prefix ">hourglass_empty</i>
-				<input id="time_to_cook" name="time_to_cook" type="text" class="validate">
+				<input id="time_to_cook" name="time_to_cook" type="text" class="validate" required>
 				<label for="icon_prefix " class="black-text">Cooking Time</label>
 			</div>
-			<div class="input-field col s6">
+			<div class="input-field col m6 s12">
 				<i class="material-icons prefix">query_builder</i>
-				<input id="prep_time" name="prep_time" type="text" class="validate">
+				<input id="prep_time" name="prep_time" type="text" class="validate" required>
 				<label for="icon_prefix" class="black-text">Prep Time</label>
 			</div>
-			<div class="input-field col s6">
+			<div class="input-field col m6 s12">
 				<i class="material-icons prefix">restaurant</i>
-				<input id="serves" name="serves" type="text" class="validate">
+				<input id="serves" name="serves" type="text" class="validate" required>
 				<label for="icon_prefix " class="black-text">Serves</label>
 			</div>
 		</div>
@@ -52,14 +52,14 @@
         <div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">subject</i>
-				<textarea name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
+				<textarea name="ingredients" id="ingredients" class="materialize-textarea" required></textarea>
 				<label for="icon_telephone" class="black-text">Ingredients</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">menu</i>
-				<textarea name="method" id="method" class="materialize-textarea"></textarea>
+				<textarea name="method" id="method" class="materialize-textarea" required></textarea>
 				<label for="icon_telephone" class="black-text">Method</label>
 			</div>
 		</div>
