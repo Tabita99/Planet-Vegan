@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-       <h1 class="center-align recipe">Recipes</h1>
+       <h1 class="center-align recipe">Recipe</h1>
        <!--row for recipe image, cooking time -->
 		<div class="row">
 			<div class="col s12 m6 left">
@@ -15,7 +15,6 @@
 			</div>
 		</div>
 		<div class=" card-panel row">
-			<!-- white middle rows -->
 			<div class="col middle-left s12 m6">
 				<h4 class="center-align">Ingredients</h4>
 				<ul id="ingredient">{{recipe.ingredients}}</ul>
@@ -25,22 +24,6 @@
 				<ul id="methods">{{recipe.method}}</ul>
 			</div>
 		</div>
-    <div class="row ">
-    <!--if statment to return back to each catefgory page  -->
-        <div class="bottom col s12">  
-        {% if recipe.categor_name == 'Dinner' %}
-          <a href="{{ url_for('breakfast') }}" class="go_back black-text">Go Back</a>
-        {% elif recipe.category_name == 'Breakfast' %}
-          <a href="{{ url_for('breakfast') }}" class="go_back black-text">Go Back</a>
-        {% elif recipe.category_name == 'Lunch' %}
-          <a href="{{ url_for('lunch') }}" class="go_back black-text">Go Back</a>
-        {% elif recipe.category_name == 'Dinner' %}
-          <a href="{{ url_for('dinner') }}" class="go_back black-text">Go Back</a>
-        {% elif recipe.category_name == 'Dessert' %}
-          <a href="{{ url_for('dessert') }}" class="go_back black-text">Go Back</a>
-        {%  endif %}
-        </div> 
-    </div>
 </div>
 
 {% endblock %}
