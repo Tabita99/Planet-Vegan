@@ -2,6 +2,8 @@
 
 ## UX
 
+### Wireframes
+
 ### Project Goals 
 
 * To create a functional vegan recipe site.
@@ -163,6 +165,9 @@ for loop and if statement and where I had placed them. To resolve these issue I 
 you're description because it was not being retrieved in MongoDB. Quickly resolved by adding a recipes description text area
 so when trying to edit your recipe.
 
+* I was having trouble insert text in my form using, a mobile device. I would have to click multiple times in order to be
+in order to be able to start typing. This was due to not changing the for inside the label, after this was done, there
+was no issue. 
 ## Technologies Used
 
 1. HTML & CSS Progamming languages 
