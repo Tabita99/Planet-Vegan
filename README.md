@@ -124,6 +124,7 @@ When creating my methods of  POST and GET to retrieve someone's login details fr
 see it was getting and posting as required, also checking to see what the HTTP response code was. This was very useful when checking when 
 creating my python functions to look for error when something was working because sometimes I may have forgotten to add the method on my from
 and that would be causing the issue.
+I also used Python tester html to validate my my app.py code.
 
 ### Issues and Resolutions 
 
@@ -201,6 +202,19 @@ so when trying to edit your recipe.
 11. then run “git push Heroku master”
 
 12. This will then deploy your app
+
+## Credits
+
+### content
+
+* README, website code examples and deploying instruction taken from https://github.com/ajgoward/daddies_recipes_MS3 and https://github.com/ceciliabinck/cook-with-me
+ and Code on Institute Mini-Task Manager Project.
+
+### Acknowledgement
+
+I would like to thank :
+The tutors at code institute for their help
+My mentor Antonio Rodriguez
 
 
 
