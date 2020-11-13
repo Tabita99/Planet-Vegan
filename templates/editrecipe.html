@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- layout inspired by  ajgoward-->
+<!--Recipe form-->
 <div class="container">
 	<div class="row">
 		<div class="">
 			<h1 class="add-recipe col s12 center align">Edit Recipe</h1>
 		</div>
 	</div>
-	<form class="col s12"  method="POST" action="{{ url_for('edit_recipes', recipe_id=recipe._id) }}">
-        <div class="row">
+	<form class="col s12" method="POST" action="{{ url_for('edit_recipes', recipe_id=recipe._id) }}">
+		<div class="row">
 			<div class="input-field col m6 s6">
 				<i class="material-icons prefix">assignment</i>
 				<input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}"
@@ -34,7 +35,8 @@
 				<label for="serves" class="black-text">Serves</label>
 			</div>
 		</div>
-        <div class="row">
+		<!--Image URL form copied ajgoward-->
+		<div class="row">
 			<div class="input-field col s12">
 				<select  name="category_name" id="category_name" class="black-text">
 			               <option value="" disabled>Choose your category</option>
@@ -44,17 +46,17 @@
 			               {% endfor %}
 			            </select>
 			</div>
-        </div>
-        <!--Image URL form copied ajgoward-->
-        <div class="row">
+		</div>
+		<!--Image URL form copied ajgoward-->
+		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">subject</i>
-				<textarea name="recipe_description" id="recipe_description" 
+				<textarea name="recipe_description" id="recipe_description"
                    class="materialize-textarea">{{recipe.recipe_description}}</textarea>
 				<label for="recipe_description" class="black-text">Recipe Description</label>
 			</div>
 		</div>
-        <div class="row">
+		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">subject</i>
 				<textarea name="ingredients" id="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
@@ -68,7 +70,7 @@
 				<label for="method" class="black-text">Method</label>
 			</div>
 		</div>
-        <div class="row center m9 align ">
+		<div class="row center m9 align ">
 			<div class="input-field col s8">
 				<textarea name="image" id="image" class="materialize-textarea">{{recipe.image}}</textarea>
 				<label for="image" class="black-text">Image URL</label>
@@ -87,24 +89,24 @@
 						</ol>
 					</div>
 					<div class="modal-footer">
-						<a href="#!" class="btn-floating btn-medium modal-close waves-effect waves-light green">Great!</a>
+						<a href="#!"
+							class="btn-floating btn-medium modal-close waves-effect waves-light green">Great!</a>
 					</div>
 				</div>
 			</div>
 		</div>
-        <div class="row">
+		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">http</i>
 				<textarea name="credit" id="credit" class="materialize-textarea">{{recipe.credit}}</textarea>
 				<label for="credit" class="black-text">Credit</label>
 			</div>
 		</div>
-        <div class="row">
+		<div class="row">
 			<div class=" add-button col s6 m6 offset-m5">
 				<button class="btn waves-effect waves-Green" type="submit" name="action">Edit Recipe!</button>
 			</div>
 		</div>
 	</form>
 </div>
-
 {% endblock %}
