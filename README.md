@@ -1,8 +1,41 @@
 # Planet Vegan 
 
+Please find the application here:
+
+## Table of Contents
+1. [**UX**](#ux)
+2. [**Wireframes**](#wireframes)
+3. [**Project Goals**](#project-goals )
+4. [**User stories**](#user-stories)
+5. [**How This Project Will Help Them**](#how-this-project-will-help-then)
+6. [**Features**](#features)
+7. [**Existing Features**](#existing-features)
+8. [**Features Left to Implement**](#features-left-to-implement)
+9. [**Design**](#design)
+10. [**Font**](#font)
+11. [**Colour**](#colour)
+12. [**Navbar**](#navabar)
+13. [**Home Page**](#home-page)
+14. [**Login And Sign Up Page**](#loing-and-sign-up-page)
+15. [**Profile Page**](#profile-page)
+16. [**Add Your Recipes Page**](#add-your-recipes-page)
+17. [**Edit And Delete Buttons**](#edit-and-delete-buttons)
+18. [**Categories Page**](#categories-page)
+19. [**Recipe Page**](#recipe-page)
+20. [**Database Schema**](#database-schema)
+21. [**Testing**](#testing)
+22. [**General Testing**](#general-testing)
+23. [**Testing Python**](#testing-python)
+24. [**Issues And Resolutions**](#issues-and-resolutions)
+25. [**Technologies Used**](#technologies-used)
+26. [**Deploying**](#deploying)
+27. [**Credits**](#credits)
+
+
 ## UX
 
 ### Wireframes
+Please view my wireframes here [here](Wireframes/Planet-Vegan.pdf)
 
 ### Project Goals 
 
@@ -22,7 +55,7 @@ of recipes of their picking. The website layout will be simple, clean, consisten
 * As vegan student I would like to find simple vegan recipes on a budget. 
 * As a vegan, I would add some vegan meals on the website that are affordable and easy to make. 
 
-### How this project will help them
+### How This Project Will Help Them
 
 * Help the discover new vegan recipes
 * You can search the desired recipes in our search.
@@ -95,7 +128,7 @@ if you do not have any recipes, the profile page is empty and only show Username
 This page allows you to upload your recipes on the site. There's a form to fill,  with text areas such as recipe name, description,
 method etc. When you've finished, you can upload the recipe. The recipe saved in your profile page
 
-### Edit and Delete Button 
+### Edit And Delete Buttons 
 The website allows you to delete and edit your the existing recipes you've created. When you go to your profile page or,
 Search your recipe there will be an edit and delete button on your recipe.
 
@@ -108,6 +141,41 @@ when you shown a recipe , you're only shown a preview showing the name. Then you
 the side it reveals a little more information about the recipe such as how time to make, prep time and serves.
 it aslo provides you with a open button. This will  take you the recipe page where you can view the ingredients,
 method of making the recipe.
+
+## Database Schema
+
+### Users 
+
+Key | Value
+------------ | -------------
+_id | ObjectID
+user | string
+password | string
+
+### category 
+
+Key | Value
+------------ | -------------
+_id | ObjectID
+name | string
+
+### Recipes
+
+Key | Value
+------------ | -------------
+_id | ObjectID
+category_name |ObjectID
+image | string
+recipe_name | string
+recipe_description | string
+time_to_cook | string
+prep_time | string
+serves | string
+Ingredients | string
+method | string 
+user | string ( retrieved by user in session)
+credit | string
+
 
 ## Testing 
 
@@ -128,7 +196,7 @@ creating my python functions to look for error when something was working becaus
 and that would be causing the issue.
 I also used Python tester html to validate my my app.py code.
 
-### Issues and Resolutions 
+### Issues And Resolutions 
 
 * When creating my dropdown list for my category on my navbar using materialise. The jquery would only activate the dropdown on the desktop 
   and not the mobile side nav. This was resolved, by creating a separate and dropdown list for the desktop and mobile device and targeting 
@@ -168,6 +236,7 @@ so when trying to edit your recipe.
 * I was having trouble insert text in my form using, a mobile device. I would have to click multiple times in order to be
 in order to be able to start typing. This was due to not changing the for inside the label, after this was done, there
 was no issue. 
+
 ## Technologies Used
 
 1. HTML & CSS Progamming languages 
