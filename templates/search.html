@@ -3,7 +3,7 @@
 		<div class="row">
 		     <h1 class="welcome-message">Search Result</h1>
 	    </div>
-			<!--Search bar-->
+		<!--Search bar-->
 		<div class="row">
 			<form class="col s12" action="{{ url_for('search') }}" method="POST">
 				<div class="row">
@@ -19,7 +19,7 @@
 		</div>
         {% for recipe in recipes %}
 	<div class="row">
-				<!-- front of the card -->
+		<!-- front of the card -->
 		<div class="card col m4 offset-m1 s12">
 			<div class="card-image waves-effect waves-block waves-light ">
 				<img class="responsive-img activator" src="{{recipe.image}}" alt="{{recipe.recipe_name}}">
