@@ -41,7 +41,7 @@
 			<div class="breakfast">
 				{% for category in categories %}
 				{% if category.name == "Breakfast" %}
-				<li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+				<p><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></p>
 				{% endif %}
 				{% endfor  %}
 			</div>
@@ -51,7 +51,7 @@
 			<div class="lunch">
 				{% for category in categories %}
 				{% if category.name == "Lunch" %}
-				<li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+				<p><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></p>
 				{% endif %}
 				{% endfor  %}
 			</div>
@@ -63,7 +63,7 @@
                <div class="dinner">
                   {% for category in categories %}
                   {% if category.name == "Dinner" %}
-                    <li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+                    <p><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></p>
                    {% endif %}
                 {% endfor  %}
                 </div>
@@ -73,7 +73,7 @@
 			<div class="desserts">
 				{% for category in categories %}
 				{% if category.name == "Dessert" %}
-				<li><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></li>
+				<p><a href="{{ url_for('category_recipes', category_id=category._id) }}">{{ category.name}}</a></p>
 				{% endif %}
 				{% endfor  %}
 			</div>
