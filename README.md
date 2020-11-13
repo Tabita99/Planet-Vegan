@@ -178,6 +178,30 @@ so when trying to edit your recipe.
 12. [Python Tester](https://extendsclass.com/python-tester.html) validate my app.py.
 13. [Heroku](https://www.heroku.com/)built my app on.
 
+## Deploying 
+
+1. Set up a Heroku account and create and application.
+
+2. Go to settings and set the VARS for IP and PORT.
+
+3. Go back to gitppod terminal and type - “Heroku login” this will take you to a webpage to login to your Heroku account
+
+5. Use “git init “to initialise and new repository
+
+6. type the command “pip3 freeze > requirements.txt” this will add a new2 file with all the packages to run your python app
+
+7. create a profile “echo web: python run.py > Procfile” if your python file is called run.py
+
+8. run the command “git remote add” and the app URL which can be found on the Heroku dashboard
+
+9. do a “git add.”
+
+10. commit your code ‘git commit -m” your message here”’
+
+11. then run “git push Heroku master”
+
+12. This will then deploy your app
+
 
 
 
