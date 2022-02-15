@@ -50,9 +50,14 @@ footer {
 
 a{
     color: black;
+
 }
 
 /*--Fonts--*/
+.nav-colour{
+    margin-left: 15px;
+
+}
 .welcome-message, .sign-up, .login, .profile-name, .brand-logo{
     font-family: 'Petit Formal Script', cursive, sans-serif; 
 }
@@ -64,6 +69,9 @@ a{
     font-size: x-large;
 }
 
+a.brand-logo {
+    margin-left: 15px !important;   
+}
 
 .category-font {
     font-family: 'Petit Formal Script', cursive, sans-serif; 
